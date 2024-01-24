@@ -76,3 +76,22 @@ export { default as Paul } from "./paul.jpeg";
 export { default as Tanya } from "./tanya.jpeg";
 export { default as TheTeam } from "./theteam.gif";
 export { default as LogoSvg } from "./logo.svg";
+
+// images used in Seo pages start ------------------------
+export { default as SeoMonitor } from "./seomonitor.svg";
+export { default as IndepthSeo } from "./indepthseo.svg";
+export { default as CriticalKeyboard } from "./criticalkeyboard.svg";
+export { default as Serp } from "./serp.svg";
+export { default as MonitoringSeo } from "./monitoringseo.svg";
+export { default as BuildingLocalOnline } from "./buildinglocalonline.svg";
+export { default as TechnicalOnline } from "./technicalaudit.svg";
+export { default as IndustrySpecific } from "./industryspecific.svg";
+
+export { default as SaasSEOAgency } from "./saasseoagencies.jpeg";
+export { default as SeoForFinance } from "./seoforfinancialservices.jpeg";
+export { default as SeoCompUk } from "./seocompaniesinuk.jpeg";
+export { default as SeoForSmallBusiness } from "./seoforsmallbusiness.jpeg";
+export { default as EcommerceAgencies } from "./ecommerceagencies.jpeg";
+export { default as SaasGuide } from "./guideforsaas.jpeg";
+
+// images used in logo end  ----------------------------------

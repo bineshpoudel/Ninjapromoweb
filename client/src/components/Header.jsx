@@ -2,28 +2,34 @@ import React from "react";
 import { LogoSvg } from "../assets";
 import { RiMenu3Fill } from "react-icons/ri";
 import { SlArrowDown } from "react-icons/sl";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="h-20 w-full bg-gradient-to-br from-[#242368] to-[#212057] text-white transition  duration-500 hover:bg-[#121212] hover:bg-gradient-to-r hover:from-[#121212] hover:to-[#121212] lg:bg-gradient-to-r lg:from-[#25246B] lg:to-[#121213]">
       <div className="mx-auto max-w-screen-xl p-4  sm:p-4 md:px-10 md:py-4">
         <div className="flex items-center justify-between ">
           <div className=" flex items-center gap-4">
-            <img src={LogoSvg} alt="logo" />
+            <Link to="/">
+              <img src={LogoSvg} alt="logo" />
+            </Link>
+
             <p className="font-thin">Marketing by Subscription</p>
           </div>
           <div className="flex h-8 w-12 items-center justify-center rounded-br-xl  rounded-tl-xl bg-[#121212] lg:hidden">
             <RiMenu3Fill className="text-2xl" />
           </div>
           <div className="hidden text-sm lg:flex lg:gap-12 ">
-            <div className="flex items-center gap-2 ">
-              <a
-                href="#"
-                className="transition-colors duration-300 ease-in-out hover:text-blue-500"
-              >
-                Services
-              </a>
-              <SlArrowDown />
-            </div>
+            <Link to="/seo">
+              <div className="flex items-center gap-2 ">
+                <a
+                  href="#"
+                  className="transition-colors duration-300 ease-in-out hover:text-blue-500"
+                >
+                  Services
+                </a>
+                <SlArrowDown />
+              </div>
+            </Link>
             <div className="flex items-center gap-2 ">
               <a
                 href="#"

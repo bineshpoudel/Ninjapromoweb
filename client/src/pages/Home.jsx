@@ -9,12 +9,12 @@ import {
   MarketingService,
   BookIntroCall,
   SubscriptionOnBoarding,
+  Packages,
 } from "../components/ui/home";
 
 const Home = () => {
   return (
     <div>
-      <Header />
       <Banner />
       <Benefit />
       <Team />
@@ -22,6 +22,7 @@ const Home = () => {
       <MarketingService />
       <BookIntroCall />
       <SubscriptionOnBoarding />
+      <Packages />
     </div>
   );
 };

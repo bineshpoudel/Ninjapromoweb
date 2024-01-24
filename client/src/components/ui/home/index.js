@@ -5,3 +5,4 @@ export { default as BrandPromotion } from "./BrandPromotion";
 export { default as MarketingService } from "./MarketingServices";
 export { default as Team } from "./Team";
 export { default as SubscriptionOnBoarding } from "./SubscriptionOnBoarding";
+export { default as Packages } from "./Packages";
