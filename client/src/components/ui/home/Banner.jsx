@@ -50,7 +50,7 @@ const Banner = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 p-2 lg:flex-row-reverse lg:gap-4">
+            <div className="flex flex-col items-center gap-2 p-2 lg:flex-row-reverse lg:gap-4">
               <p className=" text-sm font-thin">
                 Development, Design, content, ads and all you need to know in
                 one subscription

@@ -10,7 +10,14 @@ import {
   BookIntroCall,
   SubscriptionOnBoarding,
   Packages,
+  MarketingAchievements,
+  Testinomials,
+  SubscriptionTestDetails,
+  DownloadMap,
+  GlobalOffices,
+  Contact,
 } from "../components/ui/home";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -23,6 +30,13 @@ const Home = () => {
       <BookIntroCall />
       <SubscriptionOnBoarding />
       <Packages />
+      <MarketingAchievements />
+      <Testinomials />
+      <SubscriptionTestDetails />
+      <DownloadMap />
+      <GlobalOffices />
+      <Contact />
+      <Footer />
     </div>
   );
 };
