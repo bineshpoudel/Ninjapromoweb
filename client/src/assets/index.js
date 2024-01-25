@@ -1,3 +1,5 @@
+export { default as BannerBg } from "./bggradient.jpeg";
+
 export { default as Fantom } from "./fantom.svg";
 export { default as Manifest } from "./manifest.png";
 export { default as Clutch } from "./Clutch.png";
@@ -94,4 +96,6 @@ export { default as SeoForSmallBusiness } from "./seoforsmallbusiness.jpeg";
 export { default as EcommerceAgencies } from "./ecommerceagencies.jpeg";
 export { default as SaasGuide } from "./guideforsaas.jpeg";
 
-// images used in logo end  ----------------------------------
+// images used in seo end  ----------------------------------
+
+// Partner Companies

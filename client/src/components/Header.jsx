@@ -19,17 +19,56 @@ const Header = () => {
             <RiMenu3Fill className="text-2xl" />
           </div>
           <div className="hidden text-sm lg:flex lg:gap-12 ">
-            <Link to="/seo">
-              <div className="flex items-center gap-2 ">
+            <div className="group relative inline-block">
+              <Link className="flex items-center gap-2">
                 <a
                   href="#"
-                  className="transition-colors duration-300 ease-in-out hover:text-blue-500"
+                  className="transition-colors duration-300 ease-in-out group-hover:text-blue-500"
                 >
                   Services
                 </a>
                 <SlArrowDown />
+              </Link>
+
+              <div className="absolute left-0 z-10 hidden w-48 rounded bg-[#121212] p-5 py-5 text-left text-xs text-white shadow-md group-hover:block ">
+                <Link
+                  className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
+                  to="/"
+                >
+                  Social Media
+                </Link>
+                <Link
+                  className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
+                  to="/"
+                >
+                  Facebook Ads
+                </Link>
+                <Link
+                  className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
+                  to="services/seo"
+                >
+                  SEO
+                </Link>
+                <Link
+                  className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
+                  to="/"
+                >
+                  Video Production
+                </Link>
+                <Link
+                  className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
+                  to="/"
+                >
+                  Web Development
+                </Link>
+                <Link
+                  className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
+                  to="/seo"
+                >
+                  Mobile App Design
+                </Link>
               </div>
-            </Link>
+            </div>
             <div className="flex items-center gap-2 ">
               <a
                 href="#"
@@ -49,14 +88,25 @@ const Header = () => {
               <SlArrowDown />
             </div>
 
-            <div className="flex items-center gap-2">
-              <a
-                href="#"
-                className="transition-colors duration-300 ease-in-out hover:text-blue-500"
-              >
-                Company
-              </a>
-              <SlArrowDown />
+            <div className="group relative inline-block">
+              <Link className="flex items-center gap-2">
+                <a
+                  href="#"
+                  className="transition-colors duration-300 ease-in-out group-hover:text-blue-500"
+                >
+                  Company
+                </a>
+                <SlArrowDown />
+              </Link>
+
+              <div className="absolute left-0 z-10 hidden w-48 rounded bg-[#121212] p-5 py-4 text-left text-xs text-white shadow-md group-hover:block ">
+                <Link
+                  className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
+                  to="/about"
+                >
+                  About
+                </Link>
+              </div>
             </div>
 
             <div className="transition-colors duration-300 ease-in-out hover:text-blue-500">

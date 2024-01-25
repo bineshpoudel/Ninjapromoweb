@@ -12,17 +12,20 @@ const Banner = () => {
       <div className="mx-auto max-w-screen-xl p-10">
         <div className="flex flex-col items-center justify-center gap-10 py-5 md:py-24">
           <h1 className="text-center text-2xl  font-bold md:text-4xl">
-            Unlock the potential of organic search with{" "}
-            <br className="hidden md:block" /> our game-changing SEO services
+            The Brightest Minds <br className="hidden md:block" /> in Digital at
+            Your Service
           </h1>
           <p className="text-center text-xl">
-            Our agency can help you show up in search engines and get found{" "}
+            Established in 2017, NinjaPromo is an agency with influence around
+            the world. We help brands connect with their customers by creating
+            personal connections in this digital world. Most of them are still
+            with us. The key to our success? We bring personal to digital.
             <br className="hidden md:block" /> by potential customers using one
             of the most powerful marketing <br className="hidden md:block" />{" "}
             tools at your disposal.
           </p>
           <div className="flex flex-col items-center gap-10 md:flex-row md:gap-20">
-            <button className="bg-[#3C39C6] px-20 py-5">Speak to Us</button>
+            <button className="bg-[#3C39C6] px-20 py-5">Get a proposol</button>
             <div className=" hidden gap-2 md:flex">
               <p className="text-xl">Meet ninja promo</p>
               <div className="group flex size-8 items-center justify-center rounded-full bg-white hover:bg-[#3C39C6]">

@@ -32,7 +32,7 @@ const Benefit = () => {
     return (
       <div
         key={data.desc}
-        className="items hover:gradient-to-r col-span-12 flex items-center justify-center  rounded-lg border border-white bg-gradient-to-r from-[#151515] to-[#272727] px-2 hover:from-white hover:to-white hover:text-black lg:col-span-4"
+        className="items hover:gradient-to-r col-span-12 flex items-center justify-center  rounded-lg border border-white bg-gradient-to-r from-[#151515] to-[#272727] px-2 hover:from-[#eeeeee] hover:to-[#a9b8c3] hover:text-black lg:col-span-4"
       >
         <div className="flex flex-col items-center justify-center gap-4 p-10 ">
           <h2 className="text-4xl font-bold">{data.title}</h2>

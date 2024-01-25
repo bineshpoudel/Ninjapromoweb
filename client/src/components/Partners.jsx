@@ -9,7 +9,7 @@ import {
 
 const Partners = () => {
   return (
-    <div className="w-full bg-[#121212] py-20 text-white">
+    <div className="w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-10">
         <h1 className="py-10 pb-10 text-center text-4xl">
           Our Partners are backed up with the best

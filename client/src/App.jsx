@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import { Home, Seo } from "./pages";
+import { About, Home, Seo } from "./pages";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 const Layout = () => {
@@ -21,8 +21,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/seo",
+        path: "services/seo",
         element: <Seo />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
