@@ -11,7 +11,7 @@ import {
   SoftwareWorld,
   Startupstashaws,
 } from "../assets";
-const AwardData = [
+const AwardsData = [
   {
     id: "1",
     img: InfluencerMarketingHub,
@@ -99,4 +99,4 @@ const AwardData = [
   },
 ];
 
-export default AwardData;
+export default AwardsData;
