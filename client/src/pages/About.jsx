@@ -7,12 +7,14 @@ import {
 } from "../components/ui/about";
 import HappyClients from "../components/HappyClients";
 import Contact from "../components/ui/home/Contact";
+import Review from "../components/Review";
 
 const About = () => {
   return (
     <div>
       <AboutBanner />
       <Awards />
+      <Review />
       <OurTeam />
       <CompanyOverview />
       <HappyClients />
