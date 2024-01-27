@@ -22,8 +22,8 @@ const SubscriptionOnBoarding = () => {
             </div>
             <div className="absolute left-[-0.8rem] top-[80rem] flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-purple-600"></div>
           </div>
-          <div className="grid grid-cols-12 items-start gap-5 px-10 md:gap-20">
-            <div className="col-span-12 md:col-span-6 ">
+          <div className="lg :gap-20 grid grid-cols-12 items-start gap-5 px-10">
+            <div className="col-span-12 lg:col-span-6 ">
               <div className="flex flex-col gap-5">
                 <p className="text-lg md:text-2xl">
                   A skilled marketing strategist, experienced in your industry,

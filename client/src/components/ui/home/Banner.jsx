@@ -12,7 +12,7 @@ const Banner = () => {
   return (
     <div className="w-full  bg-gradient-to-br from-[#25246b] via-[#141414] to-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-4  pt-20 sm:p-4 md:px-10 md:py-4">
-        <div className="gap- flex w-full flex-col justify-between py-10 md:py-20   lg:flex-row">
+        <div className="flex w-full flex-col justify-between py-10 md:flex-row   md:py-20">
           <div className="items-left flex w-full flex-col justify-center gap-10  md:w-1/2 ">
             <div className="items-left flex flex-col gap-5 lg:flex-row ">
               <img src={BannerLeft} alt="banner left" className="h-12 w-56" />

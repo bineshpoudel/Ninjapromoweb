@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { LogoSvg } from "../assets";
 import { RiMenu3Fill } from "react-icons/ri";
 import { SlArrowDown } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import { IoMdClose } from "react-icons/io";
 const Header = () => {
+  const [sideBar, setSidebar] = useState(false);
+  const handleSidebar = () => {
+    setSidebar(!sideBar);
+  };
+
+  const renderSidebar = () => {
+    return (
+      <div className="fixed right-0 top-0 z-40 h-full w-96 bg-black ">
+        <div className="border">
+          <div className="size-8 p-5">
+            <IoMdClose className="text-2xl" onClick={handleSidebar} />
+          </div>
+          <ul className="flex flex-col gap-5 p-5 text-white">
+            <li>
+              Home <hr />
+            </li>
+            <li>
+              Seo <hr />
+            </li>
+            <li>
+              About <hr />
+            </li>
+          </ul>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="h-20 w-full bg-gradient-to-br from-[#242368] to-[#212057] text-white transition  duration-500 hover:bg-[#121212] hover:bg-gradient-to-r hover:from-[#121212] hover:to-[#121212] lg:bg-gradient-to-r lg:from-[#25246B] lg:to-[#121213]">
       <div className="mx-auto max-w-screen-xl p-4  sm:p-4 md:px-10 md:py-4">
@@ -16,7 +45,7 @@ const Header = () => {
             <p className="font-thin">Marketing by Subscription</p>
           </div>
           <div className="flex h-8 w-12 items-center justify-center rounded-br-xl  rounded-tl-xl bg-[#121212] lg:hidden">
-            <RiMenu3Fill className="text-2xl" />
+            <RiMenu3Fill className="text-2xl" onClick={handleSidebar} />
           </div>
           <div className="hidden text-sm lg:flex lg:gap-12 ">
             <div className="group relative inline-block">
@@ -122,6 +151,7 @@ const Header = () => {
               Discuss the project
             </button>
           </div>
+          {sideBar && renderSidebar()}
         </div>
       </div>
     </div>
@@ -129,5 +159,3 @@ const Header = () => {
 };
 
 export default Header;
-// #242368
-// #212057

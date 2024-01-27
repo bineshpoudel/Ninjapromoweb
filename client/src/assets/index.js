@@ -1,5 +1,5 @@
 export { default as BannerBg } from "./bggradient.jpeg";
-
+export { default as FiveArrow } from "./fivearrows.svg";
 export { default as Fantom } from "./fantom.svg";
 export { default as Manifest } from "./manifest.png";
 export { default as Clutch } from "./Clutch.png";
