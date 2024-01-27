@@ -8,12 +8,14 @@ import {
 import HappyClients from "../components/HappyClients";
 import Contact from "../components/ui/home/Contact";
 import Review from "../components/Review";
+import Partners from "../components/Partners";
 
 const About = () => {
   return (
     <div>
       <AboutBanner />
       <Awards />
+      <Partners />
       <Review />
       <OurTeam />
       <CompanyOverview />

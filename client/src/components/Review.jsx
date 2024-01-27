@@ -98,11 +98,11 @@ const Review = () => {
             </div>
             <div className="flex">
               <GoArrowLeft
-                className="h-12 w-12 cursor-pointer duration-200 hover:text-white"
+                className="h-12 w-12 cursor-pointer text-gray-500 duration-200 hover:text-white"
                 onClick={handlePrevClick}
               />
               <GoArrowRight
-                className="h-12 w-12 cursor-pointer duration-200 hover:text-white"
+                className="h-12 w-12 cursor-pointer text-gray-500 duration-200 hover:text-white"
                 onClick={handleNextClick}
               />
             </div>
