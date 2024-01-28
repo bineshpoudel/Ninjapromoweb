@@ -23,8 +23,16 @@ const Services = () => {
         </p>
 
         {/* Services section starts from here */}
-        {MobileAppDevelopmentServices?.map((service) => (
-          <div className="flex flex-col gap-4 py-10 md:flex-row">
+        {MobileAppDevelopmentServices?.map((service, index) => (
+          <div
+            key={index}
+            className={`flex flex-col gap-4 py-10 md:flex-row ${
+              index % 2 === 0 ? "md:flex-row-reverse" : "" // Apply reverse order for even iterations
+            }`}
+          >
+            <div className="">
+              <img src={service.serviceImage} alt="" />
+            </div>
             <div className="flex w-full flex-col gap-5 py-10  md:w-2/3">
               <img src={service.serviceLogo} alt="" className="size-16" />
               <h1 className="text-3xl font-bold">{service.service}</h1>
@@ -35,43 +43,8 @@ const Services = () => {
                 </button>
               </div>
             </div>
-            <div className="">
-              <img src={service.serviceImage} alt="" />
-            </div>
           </div>
         ))}
-        {/* <div className="flex flex-col gap-4 py-10 md:flex-row">
-          <div className="flex w-full flex-col gap-5 py-10  md:w-2/3">
-            <img
-              src="https://ninjapromo.io/wp-content/uploads/2022/06/mobile-app-development-custom-mobile-app-development-services-apple-1.svg"
-              alt=""
-              className="size-16"
-            />
-            <h1 className="text-3xl font-bold">
-              IPhone App Development Services
-            </h1>
-            <p className="font-thin">
-              We have a proven track record of designing high-value iOS apps
-              that fit seamlessly into the App Store. From startups looking to
-              increase their digital footprint to established corporations that
-              are seeking scalability, our agency builds apps that get noticed.
-              As a full-service iOS mobile app development company, we
-              confidently provide end-to-end services from ideation and
-              development to integration and management.
-            </p>
-            <div>
-              <button className="bg-blue-700 px-5 py-2">
-                Speak to an iOS expert
-              </button>
-            </div>
-          </div>
-          <div className="">
-            <img
-              src="https://ninjapromo.io/wp-content/uploads/2022/09/6023326-02.png"
-              alt=""
-            />
-          </div>
-        </div> */}
       </div>
     </div>
   );
