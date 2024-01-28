@@ -42,7 +42,7 @@ const Header = () => {
               <img src={LogoSvg} alt="logo" />
             </Link>
 
-            <p className="font-thin">Marketing by Subscription</p>
+            {/* <p className="font-thin">Marketing by Subscription</p> */}
           </div>
           <div className="flex h-8 w-12 items-center justify-center rounded-br-xl  rounded-tl-xl bg-[#121212] lg:hidden">
             <RiMenu3Fill className="text-2xl" onClick={handleSidebar} />
@@ -62,13 +62,13 @@ const Header = () => {
               <div className="absolute left-0 z-10 hidden w-48 rounded bg-[#121212] p-5 py-5 text-left text-xs text-white shadow-md group-hover:block ">
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
-                  to="/"
+                  to="/services/social-media"
                 >
                   Social Media
                 </Link>
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
-                  to="/"
+                  to="/services/facebook-ads"
                 >
                   Facebook Ads
                 </Link>
@@ -80,19 +80,19 @@ const Header = () => {
                 </Link>
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
-                  to="/"
+                  to="/services/video-production"
                 >
                   Video Production
                 </Link>
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
-                  to="/"
+                  to="/services/web-development"
                 >
                   Web Development
                 </Link>
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
-                  to="/seo"
+                  to="/services/mobile-app-development"
                 >
                   Mobile App Design
                 </Link>

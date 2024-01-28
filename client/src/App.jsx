@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import { About, Home, MobileAppDevelopment, Seo } from "./pages";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import VideoProduction from "./pages/VideoProduction";
+import FacebookAdsAgency from "./pages/FacebookAdsAgency";
 
 const Layout = () => {
   return (
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: "services/mobile-app-development",
         element: <MobileAppDevelopment />,
+      },
+      {
+        path: "services/video-production",
+        element: <VideoProduction />,
+      },
+      {
+        path: "services/facebook-ads-agency",
+        element: <FacebookAdsAgency />,
       },
     ],
   },
