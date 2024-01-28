@@ -1,0 +1,105 @@
+const ServedIndustries = [
+  {
+    id: 1,
+    img: "https://ninjapromo.io/wp-content/uploads/2022/06/icon-park-outline_wallet-1.svg",
+    industry: "FinTech & Cryptocurrency",
+    desc: "We specialize in",
+    specializations: [
+      "Blockchain ecosystems",
+      "Cryptocurrency exchange platforms",
+      "Cryptocurrency mobile wallets",
+      "Decentralized app (dApp) development",
+    ],
+  },
+  {
+    id: 2,
+    img: "https://ninjapromo.io/wp-content/uploads/2022/06/akar-icons_basket.svg",
+    industry: "Retail & E-Commerce",
+    desc: "We deliver",
+    specializations: [
+      "Full-scale e-commerce solutions",
+      "AI-driven shopping list platforms",
+      "Smart retail apps powered by NFC technology",
+      "Customer experience enhancement solutions",
+      "IoT solutions for device and sensor management",
+    ],
+  },
+  {
+    id: 3,
+    img: "https://ninjapromo.io/wp-content/uploads/2022/06/ep_map-location.svg",
+    industry: "Lifestyle and travel",
+    desc: "We develop:",
+    specializations: [
+      "360° virtual reality (VR) tour platforms",
+      "Dedicated loyalty apps",
+      "Travel planning and scheduling tools",
+      "AI-powered recommendations services",
+    ],
+  },
+  {
+    id: 4,
+    img: "https://ninjapromo.io/wp-content/uploads/2022/06/ion_game-controller-outline.svg",
+    industry: "Gaming & Entertainment",
+    desc: "We build",
+    specializations: [
+      " Unity, Cocos2D-x, and Unreal Engine games",
+      "Smart contract-powered strategy games",
+      "Role-playing games (RPG)",
+      "Social gaming platforms",
+      "Betting platforms",
+    ],
+  },
+  {
+    id: 5,
+    img: "https://ninjapromo.io/wp-content/uploads/2022/06/maicon04.svg",
+    industry: "Logistics & Distribution",
+    desc: "We design",
+    specializations: [
+      "Supply chain management systems",
+      "Cargo and fleet management solutions",
+      "Document management tools",
+      "GPS routing and navigation platforms",
+    ],
+  },
+  {
+    id: 6,
+    img: "https://ninjapromo.io/wp-content/uploads/2022/06/fluent_hat-graduation-20-regular.svg",
+    industry: "E learning",
+    desc: "We create",
+    specializations: [
+      "Audiovisual conferencing solitons",
+      "Performance tracking and evaluation apps",
+      "Collaboration and feedback exchange",
+      "Interactive tutorials",
+      "Content management systems (CMS)",
+    ],
+  },
+  {
+    id: 7,
+    img: "https://ninjapromo.io/wp-content/uploads/2022/06/icon-park_cardioelectric.svg",
+    industry: "Healthcare & medicine",
+    desc: "We produce",
+    specializations: [
+      "mHealth (mobile healthcare) apps",
+      "Telemedicine solutions",
+      "Supply chain tracking platforms",
+      "Remote patient monitoring apps",
+      "EHR (electronic health record) platforms",
+      "AI-enabled diagnostic imaging solutions",
+    ],
+  },
+  {
+    id: 8,
+    img: "https://ninjapromo.io/wp-content/uploads/2022/06/maicon03.svg",
+    industry: "Social Networking & Telecommunications",
+    desc: "We launch",
+    specializations: [
+      "Digital contract and data storage platforms",
+      "Social media influencer apps",
+      "Image sharing platforms",
+      "Real-time communication (RTC) solutions",
+    ],
+  },
+];
+
+export default ServedIndustries;

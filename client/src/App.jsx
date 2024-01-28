@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import { About, Home, Seo } from "./pages";
+import { About, Home, MobileAppDevelopment, Seo } from "./pages";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 const Layout = () => {
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "services/mobile-app-development",
+        element: <MobileAppDevelopment />,
       },
     ],
   },
