@@ -1,8 +1,15 @@
-import Header from "./components/Header";
-import { About, Home, MobileAppDevelopment, Seo } from "./pages";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import VideoProduction from "./pages/VideoProduction";
-import FacebookAdsAgency from "./pages/FacebookAdsAgency";
+import Header from "./components/Header";
+import {
+  About,
+  Home,
+  MobileAppDevelopment,
+  Seo,
+  SocialMedia,
+  WebDesign,
+  VideoProduction,
+  FacebookAdsAgency,
+} from "./pages";
 
 const Layout = () => {
   return (
@@ -41,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: "services/facebook-ads-agency",
         element: <FacebookAdsAgency />,
+      },
+      {
+        path: "services/web-development",
+        element: <WebDesign />,
+      },
+      {
+        path: "services/social-media",
+        element: <SocialMedia />,
       },
     ],
   },

@@ -68,7 +68,7 @@ const Header = () => {
                 </Link>
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
-                  to="/services/facebook-ads"
+                  to="/services/facebook-ads-agency"
                 >
                   Facebook Ads
                 </Link>

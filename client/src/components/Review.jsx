@@ -88,10 +88,10 @@ const Review = () => {
             {renderReview}
           </Slider>
 
-          <div className="flex  justify-between p-5">
+          <div className="flex  items-center justify-between p-5">
             <div>
               <div className="">
-                <button className="bg-blue-700 px-10 py-4">
+                <button className="bg-[#3c39c6] px-20 py-5">
                   Get a proposal
                 </button>
               </div>

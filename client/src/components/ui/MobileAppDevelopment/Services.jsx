@@ -27,7 +27,7 @@ const Services = () => {
           <div
             key={index}
             className={`flex flex-col gap-4 py-10 md:flex-row ${
-              index % 2 === 0 ? "md:flex-row-reverse" : "" // Apply reverse order for even iterations
+              index % 2 === 0 ? "md:flex-row-reverse" : ""
             }`}
           >
             <div className="">
