@@ -1,20 +1,10 @@
 import React from "react";
+import Sajha from "../../Sajha";
 
 const SuccessStories = () => {
   return (
     <div>
-      <div className="w-full bg-[#121212] text-white">
-        <div className="mx-auto max-w-screen-xl p-10">
-          <div className="flex flex-col  gap-5 p-20">
-            <h1 className="text-center text-xl md:text-3xl">
-              Our Success Stories
-            </h1>
-            <div className="text-center">
-              <button className="bg-blue-700 px-10 py-4 ">Learn More</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Sajha title={"Our Success Stories"} label={"Learn More"} />
       <div className="w-full py-20">
         <div className="mx-auto max-w-screen-xl p-10 ">
           <div className="flex flex-col gap-4">

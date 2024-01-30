@@ -23,25 +23,31 @@ const Services = () => {
         </p>
 
         {/* Services section starts from here */}
-        {MobileAppDevelopmentServices?.map((service, index) => (
+        {MobileAppDevelopmentServices.map((service, index) => (
           <div
             key={index}
-            className={`flex flex-col gap-4 py-10 md:flex-row ${
+            className={`flex flex-col items-center gap-10 py-10 md:flex-row ${
               index % 2 === 0 ? "md:flex-row-reverse" : ""
             }`}
           >
-            <div className="">
+            <div>
               <img src={service.serviceImage} alt="" />
             </div>
-            <div className="flex w-full flex-col gap-5 py-10  md:w-2/3">
-              <img src={service.serviceLogo} alt="" className="size-16" />
-              <h1 className="text-3xl font-bold">{service.service}</h1>
-              <p className="font-thin">{service.desc}</p>
-              <div>
-                <button className="bg-blue-700 px-5 py-2">
-                  {service.buttonText}
-                </button>
-              </div>
+            <div className="flex w-full flex-col gap-10 py-10  md:w-2/3">
+              {service.serviceLogo && (
+                <img src={service.serviceLogo} alt="" className="size-16" />
+              )}
+              {service.service && (
+                <h1 className="text-3xl font-bold">{service.service}</h1>
+              )}
+              {service.desc && <p className="font-thin">{service.desc}</p>}
+              {service.buttonText && (
+                <div>
+                  <button className="bg-blue-700 px-5 py-2">
+                    {service.buttonText}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         ))}

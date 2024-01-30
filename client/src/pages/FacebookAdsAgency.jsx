@@ -4,8 +4,8 @@ import {
   AdvertisingMethods,
   Banner,
   Faq,
-  GrowBusiness,
   Introduction,
+  WhyChoseUs,
 } from "../components/ui/FacebookAdsAgency";
 import Review from "../components/Review";
 import Partners from "../components/Partners";
@@ -20,7 +20,7 @@ const FacebookAdsAgency = () => {
       <Review />
       <Partners />
       <AdvertisingMethods />
-      <GrowBusiness />
+      <WhyChoseUs />
       <Faq />
       <HappyClients />
       <GrowJourney />

@@ -21,7 +21,6 @@ const MobileAppDevelopmentServices = [
   },
   {
     id: "3",
-    serviceLogo: "",
     serviceImage:
       "https://ninjapromo.io/wp-content/uploads/2022/09/602323326-02.png",
     service: "Hybrid App Development Services",

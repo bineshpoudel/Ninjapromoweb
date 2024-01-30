@@ -6,3 +6,4 @@ export { default as Approach } from "./Approach";
 export { default as PromoSection } from "./PromoSection";
 export { default as ServiceOfferings } from "./ServiceOfferings";
 export { default as Faq } from "./Faq";
+export { default as WebDesignFeatures } from "./WebDesignFeatures";

@@ -58,7 +58,7 @@ const Review = () => {
           <img className="h-10" src={data.company} alt="" />
         </div>
         <div className="h-10">
-          <h1 className="text-md">{data.service}</h1>
+          <h1 className="text-md">{data.serviceProvided}</h1>
         </div>
 
         <p className="pr-4 text-xs">{data.reviewText}</p>
@@ -88,10 +88,10 @@ const Review = () => {
             {renderReview}
           </Slider>
 
-          <div className="flex  items-center justify-between p-5">
+          <div className="flex flex-col-reverse items-center justify-between gap-5 p-5 md:flex-row">
             <div>
               <div className="">
-                <button className="bg-[#3c39c6] px-20 py-5">
+                <button className="bg-[#3c39c6] px-10 py-5 md:px-20">
                   Get a proposal
                 </button>
               </div>

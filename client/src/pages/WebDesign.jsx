@@ -7,6 +7,7 @@ import {
   OurSolutions,
   PromoSection,
   ServiceOfferings,
+  WebDesignFeatures,
   WebDesignServices,
 } from "../components/ui/WebDesign";
 import HappyClients from "../components/HappyClients";
@@ -18,6 +19,7 @@ const WebDesign = () => {
     <div>
       <Banner />
       <WebDesignServices />
+      <WebDesignFeatures />
       <OurSolutions />
       <IndustriesServed />
       <Review />

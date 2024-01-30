@@ -6,7 +6,7 @@ const Banner = () => {
     <>
       <div className="w-full bg-gradient-to-r from-[#400280] to-[#2A27AD] text-white">
         <div className="mx-auto max-w-screen-xl p-10">
-          <div className="flex py-20">
+          <div className="flex flex-col justify-between gap-10 py-20 md:flex-row">
             <div className="flex w-full flex-col gap-10 py-5 md:w-1/2">
               <div className="flex items-center gap-2 text-xs">
                 <span>Homepage &gt;</span>
@@ -27,8 +27,11 @@ const Banner = () => {
                 </button>
               </div>
             </div>
-            <div className="justify-self-end">
-              <FaPlay />
+            <div className="flex cursor-pointer flex-col-reverse align-text-bottom">
+              <img
+                src="https://ninjapromo.io/wp-content/themes/ninjapromo/assets/newdesign/meet-btn.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>

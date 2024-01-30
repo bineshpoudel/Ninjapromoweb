@@ -12,7 +12,7 @@ const VideoProductionExamples = () => {
       </div>
       <div className="grid grid-cols-1  md:grid-cols-2">
         {VideoProductionExamplesData.map((video) => (
-          <div key={video.id} className="group relative">
+          <div key={video.id} className="group relative cursor-pointer">
             <img
               src={video.img}
               alt=""

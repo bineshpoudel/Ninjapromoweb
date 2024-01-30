@@ -20,7 +20,12 @@ const CaseStudies = () => {
               />
               <div className="w-full bg-[#292D36] px-4 py-10 md:w-1/2">
                 <div className="flex flex-col gap-5">
-                  <h1 className="text-3xl">Paypoliton</h1>
+                  <h1 className="text-3xl">
+                    Paypoliton
+                    <span>
+                      <hr className="h-1 w-6 border-none bg-blue-700" />
+                    </span>
+                  </h1>
                   <div className="flex gap-2">
                     <button className="bg-blue-700 p-1 text-xs">
                       organic social
@@ -60,7 +65,12 @@ const CaseStudies = () => {
               />
               <div className="w-full bg-[#292D36] px-4 py-10 md:w-1/2">
                 <div className="flex flex-col gap-5">
-                  <h1 className="text-3xl">Fitness Club</h1>
+                  <h1 className="text-3xl">
+                    Fitness Club
+                    <span>
+                      <hr className="h-1 w-6 border-none bg-blue-700" />
+                    </span>
+                  </h1>
                   <div className="flex gap-2">
                     <button className="bg-blue-700 p-1 text-xs">
                       organic social

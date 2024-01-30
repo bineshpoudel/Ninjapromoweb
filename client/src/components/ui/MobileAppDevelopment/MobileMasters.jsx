@@ -11,44 +11,49 @@ const MobileMasters = () => {
         </div>
 
         <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-12 flex flex-col gap-3 rounded-lg bg-[#05002A] p-10 text-white md:col-span-4 ">
-            <h1 className="text-5xl font-bold">
-              120
-              <span>
-                <hr className="h-1 w-6 bg-white" />
-              </span>
-            </h1>
-
+          <div
+            className="col-span-12 flex flex-col gap-3 rounded-lg p-10 text-white md:col-span-4"
+            style={{
+              backgroundImage: `url("https://ninjapromo.io/wp-content/uploads/2022/06/preference01.jpg")`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h1 className="text-5xl font-bold">120</h1>
+            <span className="">
+              <hr className="h-0.5 w-10 border-none bg-white" />
+            </span>
             <p>Successful mobile app development projects</p>
           </div>
+
           <div className="col-span-12 flex flex-col gap-2 md:col-span-4 ">
-            <div className="flex flex-col gap-3 rounded-lg bg-[#121212] p-5 text-white">
-              <h1 className="text-5xl font-bold">
-                15+
-                <span>
-                  <hr className="h-1 w-6 bg-white" />
-                </span>
-              </h1>
+            <div className="flex flex-col gap-3 rounded-lg bg-[#121212] p-10 text-white">
+              <h1 className="text-5xl font-bold">15+</h1>
+              <span>
+                <hr className="h-0.5 w-10 border-none bg-white" />
+              </span>
               <p>Years developing cutting-edge mobile solutions</p>
             </div>
-
-            <div className="flex flex-col gap-3 rounded-lg bg-[#6C35E1] p-5 text-white">
-              <h1 className="text-5xl font-bold">
-                13+
-                <span>
-                  <hr className="h-1 w-6 bg-white" />
-                </span>
-              </h1>
+            <div className="flex flex-col gap-3 rounded-lg bg-[#6C35E1] p-10 text-white">
+              <h1 className="text-5xl font-bold">13+</h1>
+              <span className="">
+                <hr className="h-0.5 w-10 border-none bg-white" />
+              </span>
               <p>Qualified mobile app developers</p>
             </div>
           </div>
-          <div className="col-span-12 flex flex-col gap-3 rounded-lg bg-[#400A6F] p-10 text-white  md:col-span-4">
-            <h1 className="text-5xl font-bold">
-              85%
-              <span>
-                <hr className="h-1 w-6 bg-white" />
-              </span>
-            </h1>
+          <div
+            className="col-span-12 flex flex-col gap-3 rounded-lg bg-[#400A6F] p-10 text-white  md:col-span-4"
+            style={{
+              backgroundImage: `url('https://ninjapromo.io/wp-content/uploads/2022/06/preference02.jpg')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h1 className="text-5xl font-bold">85%</h1>
+            <span className="">
+              <hr className="h-0.5 w-10 border-none bg-white" />
+            </span>
 
             <p>Repeat Business</p>
           </div>

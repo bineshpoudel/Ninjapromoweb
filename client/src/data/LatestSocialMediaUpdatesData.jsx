@@ -1,4 +1,4 @@
-const LatestVideoUpdatesData = [
+const LatestSocialMediaUpdatesData = [
   {
     id: 1,
     image:
@@ -56,4 +56,4 @@ const LatestVideoUpdatesData = [
   },
 ];
 
-export default LatestVideoUpdatesData;
+export default LatestSocialMediaUpdatesData;

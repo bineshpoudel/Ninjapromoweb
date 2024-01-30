@@ -1,5 +1,6 @@
 import React from "react";
 import MarketingSteps from "../../../data/MarketingSteps";
+import Sajha from "../../Sajha";
 
 const AdvertisingMethods = () => {
   return (

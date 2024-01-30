@@ -4,6 +4,7 @@ import {
   Introduction,
   LatestVideoUpdates,
   VideoProductionExamples,
+  VideoProductionProcess,
   VideoProductionServices,
 } from "../components/ui/VideoProduction";
 import Review from "../components/Review";
@@ -20,6 +21,7 @@ const VideoProduction = () => {
       <VideoProductionServices />
       <Review />
       <Partners />
+      <VideoProductionProcess />
       <LatestVideoUpdates />
       <HappyClients />
       <GrowJourney />
