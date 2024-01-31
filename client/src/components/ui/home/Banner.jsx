@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   AirBnb,
   BannerLeft,
@@ -8,12 +8,24 @@ import {
 } from "../../../assets";
 import { IoMdStar } from "react-icons/io";
 import { PiCrown } from "react-icons/pi";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Banner = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="w-full  bg-gradient-to-br from-[#25246b] via-[#141414] to-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-4  pt-20 sm:p-4 md:px-10 md:py-4">
         <div className="flex w-full flex-col justify-between py-10 md:flex-row   md:py-20">
-          <div className="items-left flex w-full flex-col justify-center gap-10  md:w-1/2 ">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            className="items-left flex w-full flex-col justify-center gap-10  md:w-1/2 "
+          >
             <div className="items-left flex flex-col gap-5 lg:flex-row ">
               <img src={BannerLeft} alt="banner left" className="h-12 w-56" />
               <div className="flex h-[2.578rem] w-[15.78rem]  items-center gap-4 rounded-full  border border-white px-5  py-2">
@@ -69,6 +81,7 @@ const Banner = () => {
               src={BannerRight}
               alt="banner-right"
               className="h-96 w-96 duration-500 hover:scale-110 md:h-[45.5rem] md:w-[45.5rem] lg:h-[471px] lg:w-[471px] "
+              data-aos="fade-up"
             />
             <div className="h-30 md:h-42 absolute  bottom-[-1.8rem] right-[1.2rem] flex w-3/5 flex-col gap-4 rounded-md bg-[#181818] px-6  py-4 text-xs md:right-[-1.6rem] md:w-4/5 md:text-xl">
               <h2 className="text-xl md:text-2xl">Clutch</h2>

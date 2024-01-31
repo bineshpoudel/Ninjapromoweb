@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { ImPower } from "react-icons/im";
-import { FaCheckCircle } from "react-icons/fa";
 const MarketingTransformation = () => {
-  const [isTextVisible, setIsTextVisible] = useState(false);
-
-  const handleCheckClick = () => {
-    setIsTextVisible(!isTextVisible);
-  };
   return (
     <div className="w-full py-10">
       <div className="mx-auto max-w-screen-xl p-10 ">
@@ -29,7 +23,7 @@ const MarketingTransformation = () => {
         <div className="py-20">
           <h1 className="flex flex-col items-center justify-center py-5 text-center text-3xl font-semibold md:flex-row md:text-5xl">
             How Our SSM Agency &nbsp;
-            <span className="bg-gradient-to-r from-blue-700 via-purple-700 to-red-500 p-5 text-white">
+            <span className="-skew-x-12 bg-gradient-to-r from-blue-700 via-purple-700 to-red-500 p-5 text-white">
               Drive Results
             </span>
           </h1>
@@ -58,25 +52,6 @@ const MarketingTransformation = () => {
                 to create tailor-made social media solutions that achieve real
                 results.
               </p>
-            </div>
-          </div>
-
-          <div className="pt-20">
-            <h1 className="pb-5 text-center text-2xl font-bold text-blue-700">
-              Our Process is Simple But Effective
-            </h1>
-
-            <div className="flex flex-col gap-2 rounded-md border p-5">
-              <div className="flex items-center justify-between">
-                <h1 className="text-3xl md:text-5xl">Discovery</h1>
-                <FaCheckCircle
-                  className="size-12 cursor-pointer text-green-500  "
-                  onClick={handleCheckClick}
-                />
-              </div>
-              {isTextVisible && (
-                <p className="text-xl font-thin">This is a checking text</p>
-              )}
             </div>
           </div>
         </div>

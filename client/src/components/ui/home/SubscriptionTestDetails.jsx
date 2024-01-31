@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SubscriptionTestImg } from "../../../assets";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const SubscriptionTestDetails = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl px-10 py-20 pb-20">
-        <h1 className="pb-20 text-center text-4xl">
+        <h1
+          className="pb-20 text-center text-2xl md:text-5xl"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Test the subscription model
         </h1>
 
         <div className="flex flex-col items-center gap-10 md:flex-row ">
-          <div sclassName="flex flex-col gap-16 w-1/2 ">
+          <div
+            sclassName="flex flex-col gap-16 w-1/2 "
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
             <h2 className="text-2xl">
               Register for the Zoom presentation and receive:
             </h2>
@@ -37,7 +49,11 @@ const SubscriptionTestDetails = () => {
               </button>
             </div>
           </div>
-          <div className="w-full md:w-1/2">
+          <div
+            className="w-full md:w-1/2"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
             <img
               src={SubscriptionTestImg}
               alt="subscription-test-img"

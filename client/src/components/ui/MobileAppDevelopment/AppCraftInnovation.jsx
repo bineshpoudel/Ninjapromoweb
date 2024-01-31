@@ -1,17 +1,44 @@
-import React from "react";
+import React, { useRef } from "react";
 import SpecialistServices from "../../../data/MobileAppSpecialistServices";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Sajha from "../../Sajha";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const AppCraftInnovation = () => {
+  const sliderRef = useRef(null);
+
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+    ],
+  };
+
+  const handlePrevClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
+
+  const handleNextClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
   };
 
   return (
@@ -34,15 +61,28 @@ const AppCraftInnovation = () => {
           </div>
 
           <div className="">
-            <Slider {...settings}>
+            <Slider {...settings} ref={sliderRef} className="m">
               {SpecialistServices.map((service) => (
-                <div key={service.id} className="bg-white">
-                  <img src={service.img} alt="" />
-                  <h1 className="p-3 text-lg">{service.service}</h1>
-                  <p className="p-3 text-xs">{service.desc}</p>
+                <div key={service.id}>
+                  <div className="bg-white">
+                    <img src={service.img} alt="" />
+                    <h1 className="p-3 text-lg">{service.service}</h1>
+                    <p className="p-3 text-xs">{service.desc}</p>
+                  </div>
                 </div>
               ))}
             </Slider>
+
+            <div className="mt-5 flex cursor-pointer">
+              <GoArrowLeft
+                className="h-12 w-12 cursor-pointer text-gray-500 "
+                onClick={handlePrevClick}
+              />
+              <GoArrowRight
+                className="h-12 w-12 cursor-pointer text-gray-500"
+                onClick={handleNextClick}
+              />
+            </div>
           </div>
         </div>
       </div>

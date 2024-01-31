@@ -1,10 +1,17 @@
 import React from "react";
-import { FaPlay } from "react-icons/fa";
+import { RiTrophyFill } from "react-icons/ri";
+import AwardsData from "../../../data/AwardsData";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Banner = () => {
+  const digitalMarketingAwards = AwardsData.filter(
+    (award) => award.award === "digitalmarketing",
+  );
+
   return (
-    <>
-      <div className="w-full bg-gradient-to-r from-[#400280] to-[#2A27AD] text-white">
+    <div>
+      <div className="w-full bg-gradient-to-r from-[#400280] to-[#2A27AD] py-20 text-white">
         <div className="mx-auto max-w-screen-xl p-10">
           <div className="flex flex-col justify-between gap-10 py-20 md:flex-row">
             <div className="flex w-full flex-col gap-10 py-5 md:w-1/2">
@@ -36,7 +43,34 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#121212] text-white">
+      <div className="relative w-full text-white md:w-11/12 ">
+        <div className="absolute -top-32 left-2 right-2 flex flex-col items-center gap-5 bg-[#3C39C6] p-10  md:left-48 md:flex-row md:p-10">
+          <div>
+            <h1 className="flex items-center gap-2 text-2xl">
+              <RiTrophyFill />
+              AWARD-WINNING TEAM
+            </h1>
+            <p>
+              led by senior-level strategists, creatives, and producers that
+              work directly with ambitious brands to create advertising that is
+              impossible to ignore.
+            </p>
+          </div>
+
+          <div className="flex w-full flex-col  items-center gap-5 overflow-x-auto md:w-3/4 md:flex-row">
+            {digitalMarketingAwards.map((award) => (
+              <div className="min-h-24 min-w-[20rem] rounded-br-3xl rounded-tl-3xl border border-gray-500 p-2">
+                <div className="flex flex-col items-center justify-center gap-3 rounded-br-3xl  rounded-tl-3xl border border-dotted p-5">
+                  <img src={award.img} alt="" />
+                  <p className="text-center">{award.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full bg-[#121212] pb-20 pt-[40rem] text-white   md:pt-20 ">
         <div className="mx-auto max-w-screen-xl p-10">
           <h1 className="py-10 text-3xl md:text-5xl ">
             Partner with a Social Media Marketing Agency to Unleash Your
@@ -60,7 +94,7 @@ const Banner = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

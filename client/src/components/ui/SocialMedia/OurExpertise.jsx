@@ -12,7 +12,9 @@ const OurExpertise = () => {
       <div className="ml-auto max-w-screen-xl p-10">
         <h1 className="flex flex-col items-center py-5 text-3xl font-semibold text-white md:flex-row md:text-5xl">
           Our &nbsp;
-          <span className="bg-white p-5 text-black">Expertise</span>
+          <span className="-skew-x-12 bg-white p-5 font-normal text-black">
+            Expertise
+          </span>
         </h1>
 
         <div className="flex gap-4 overflow-x-auto">

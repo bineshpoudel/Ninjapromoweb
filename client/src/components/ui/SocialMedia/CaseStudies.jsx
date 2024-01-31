@@ -18,6 +18,7 @@ const CaseStudies = () => {
                 alt=""
                 className="w-full md:w-1/2"
               />
+
               <div className="w-full bg-[#292D36] px-4 py-10 md:w-1/2">
                 <div className="flex flex-col gap-5">
                   <h1 className="text-3xl">

@@ -8,7 +8,12 @@ import {
 } from "../../../assets";
 const Banner = () => {
   return (
-    <div className="bg-gradientbg object-fit  w-full text-white">
+    <div
+      style={{
+        backgroundImage: `url('https://ninjapromo.io/wp-content/themes/ninjapromo/assets/img/hero-section/hero-bg-front.jpg')`,
+      }}
+      className="w-full bg-cover text-white"
+    >
       <div className="mx-auto max-w-screen-xl p-10">
         <div className="flex flex-col items-center justify-center gap-10 py-5 md:py-24">
           <h1 className="text-center text-2xl  font-bold md:text-4xl">

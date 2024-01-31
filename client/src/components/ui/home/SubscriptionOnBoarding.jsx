@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AccessImg, ReportImg, Strategist } from "../../../assets";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const SubscriptionOnBoarding = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className=" w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl px-10 py-20">
-        <h1 className="pb-20 text-center text-5xl">
+        <h1 className="pb-20 text-center text-5xl" data-aos="fade-down">
           You're now subscribed - <br />
           What comes next?
         </h1>
-        <div className="flex  gap-3 md:gap-40">
+        <div className="flex  gap-3 md:gap-40" data-aos="fade-up">
           <div className="group relative h-[160vh] border border-white group-hover:border-red-500">
             <div className="absolute left-[-2rem] top-[-0.8rem] flex h-16 w-16 items-center justify-center rounded-full border border-white bg-black">
               1

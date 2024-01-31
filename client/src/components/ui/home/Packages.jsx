@@ -1,24 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoIosCheckmarkCircle } from "react-icons/io";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Packages = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const packageDetails = [
     {
       rate: "9600",
       hoursPerMonth: "160",
       ratePerHour: "60",
       package: "A full marketing department",
+      isActive: false,
     },
     {
       rate: "5600",
       hoursPerMonth: "80",
       ratePerHour: "70",
       package: "3-4 regular tasks",
+      isActive: true,
     },
     {
       rate: "3200",
       hoursPerMonth: "40",
       ratePerHour: "80",
       package: "1-2 regular tasks",
+      isActive: false,
     },
   ];
 
@@ -59,7 +67,11 @@ const Packages = () => {
             If you have fewer tasks right now, choose the 80 or 40-hour package
           </h1>
         </div>
-        <div className="flex flex-col gap-5 overflow-x-auto md:flex-row  ">
+        <div
+          className="flex flex-col gap-5 overflow-x-auto md:flex-row  "
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           {renderPackage}
         </div>
       </div>

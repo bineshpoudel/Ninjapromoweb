@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { DownloadMapImg } from "../../../assets";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const DownloadMap = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full bg-gradient-to-r from-[#14141B] to-[#345CDB] text-white">
       <div className="mx-auto max-w-screen-xl px-10 py-20">
         <div className="flex flex-col gap-10 md:flex-row">
-          <div className="flex flex-col gap-10">
+          <div
+            className="flex flex-col gap-10"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <h1 className="text-4xl font-bold">
               If you're not ready yet, download <br />
               our free "Ideal Marketing <br />
@@ -43,7 +51,7 @@ const DownloadMap = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div className="" data-aos="fade-down" data-aos-duration="2000">
             <img
               src={DownloadMapImg}
               alt="downloadimg"

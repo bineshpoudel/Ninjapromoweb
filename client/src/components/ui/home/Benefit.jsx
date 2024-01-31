@@ -1,6 +1,10 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Benefit = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const benefitData = [
     {
       title: "1-3 month",
@@ -32,6 +36,7 @@ const Benefit = () => {
     return (
       <div
         key={data.desc}
+        data-aos="fade-up"
         className="items hover:gradient-to-r col-span-12 flex items-center justify-center  rounded-lg border border-white bg-gradient-to-r from-[#151515] to-[#272727] px-2 hover:from-[#eeeeee] hover:to-[#a9b8c3] hover:text-black lg:col-span-4"
       >
         <div className="flex flex-col items-center justify-center gap-4 p-10 ">

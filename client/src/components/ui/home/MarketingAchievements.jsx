@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { MarketingAchievement } from "../../../assets";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const MarketingAchievements = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl px-10 pb-20">
         <div className="pb-16">
-          <h1 className=" whitespace-normal text-center text-2xl font-bold  md:whitespace-nowrap md:text-4xl">
+          <h1
+            className=" whitespace-normal text-center text-2xl font-bold  md:whitespace-nowrap md:text-4xl"
+            data-aos="fade-up"
+          >
             You'll get the experience and resources <br /> of the world's № 1
             digital agency at the price <br /> of 1-2 in-house marketers
           </h1>
         </div>
 
         <div className="flex flex-col gap-2 md:flex-row">
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5" data-aos="fade-right">
             <div className="flex flex-col gap-5 text-gray-400 underline">
               <p>Best Digital Agencies Worldwide</p>
               <p>Top Digital Marketing Agencies for Startups</p>
@@ -39,6 +46,7 @@ const MarketingAchievements = () => {
               src={MarketingAchievement}
               alt="marketingachievement"
               className="duration-500 hover:scale-110"
+              aos-data="fade-left"
             />
           </div>
         </div>

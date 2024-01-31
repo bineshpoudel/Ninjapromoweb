@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import OfficeData from "../../../data/OfficeData";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const GlobalOffices = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const renderOffices = OfficeData.map((office) => (
     <div
       key={office.id}
@@ -23,13 +27,27 @@ const GlobalOffices = () => {
     <div className="w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-10 py-20 pb-20">
         <div className="flex flex-col gap-10 py-10 text-center">
-          <h1 className="text-4xl">We Work worldwide</h1>
-          <p className="text-center text-2xl">
-            A fully remote team of over 100 top marketing experts{" "}
+          <h1
+            className="text-3xl md:text-5xl"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+          >
+            We Work worldwide
+          </h1>
+          <p
+            className="text-center text-2xl"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            A fully remote team of over 100 top marketing experts
             <br className="hidden md:block" /> from around the world
           </p>
         </div>
-        <div className="flex overflow-x-auto overscroll-x-auto">
+        <div
+          className="flex overflow-x-auto overscroll-x-auto"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
           {renderOffices}
         </div>
       </div>

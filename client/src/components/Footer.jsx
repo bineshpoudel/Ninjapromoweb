@@ -10,6 +10,7 @@ import {
   FaPhone,
   FaBehance,
 } from "react-icons/fa";
+import Social from "./Social";
 const Footer = () => {
   return (
     <div className="w-full bg-[#121212] pb-20 pt-20 text-white">
@@ -56,30 +57,7 @@ const Footer = () => {
           </div>
           <div className="flex w-full flex-col justify-between gap-10 md:w-1/3 md:gap-0">
             <div>
-              <div className="flex gap-2 pl-3">
-                <FaFacebook
-                  className="h-8 w-8 rounded-full border-2 border-white bg-black p-1
-              duration-300 hover:border-none hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-700
-              "
-                />
-                <FaTwitter className="h-8 w-8 rounded-full border-2 border-white bg-black p-1 duration-300 hover:border-none hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-700 " />
-                <FaYoutube
-                  className="h-8 w-8 rounded-full border-2 border-white bg-black p-1 
-              duration-300 hover:border-none hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-700"
-                />
-                <FaLinkedin
-                  className="h-8 w-8 rounded-full border-2 border-white bg-black p-1
-              duration-300 hover:border-none hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-700"
-                />
-                <FaInstagram
-                  className="h-8 w-8 rounded-full border-2 border-white bg-black p-1 
-              duration-300 hover:border-none hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-700"
-                />
-                <FaBehance
-                  className="h-8 w-8 rounded-full border-2 border-white bg-black p-1 text-white 
-              duration-300 hover:border-none hover:bg-gradient-to-r hover:from-rose-500 hover:to-purple-700"
-                />
-              </div>
+              <Social />
             </div>
             <div>
               <p className="text-sm text-gray-500">

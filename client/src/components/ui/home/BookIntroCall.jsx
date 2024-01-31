@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Team1 } from "../../../assets";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const BookIntroCall = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full bg-gradient-to-r from-[#161523] via-[#2D2B87] to-[#3363E0] py-10 text-white">
       <div className="mx-auto max-w-screen-xl p-10">
-        <div className="items-left flex flex-col justify-between gap-10 md:flex-row  md:items-center md:gap-4 ">
+        <div
+          className="items-left flex flex-col justify-between gap-10 md:flex-row  md:items-center md:gap-4 "
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <div className="w-full md:w-1/4">
             <img src={Team1} alt="" className="size-24 md:size-40 " />
           </div>

@@ -9,6 +9,7 @@ import {
   MarketingServices,
   MarketingTransformation,
   OurExpertise,
+  Process,
   SocialMediaMarketing,
 } from "../components/ui/SocialMedia";
 import Review from "../components/Review";
@@ -24,6 +25,7 @@ const SocialMedia = () => {
       <Review />
       <BackedPartners />
       <MarketingTransformation />
+      <Process />
       <OurExpertise />
       <SocialMediaMarketing />
       <HappyClients />

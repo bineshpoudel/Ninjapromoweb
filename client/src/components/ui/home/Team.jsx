@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   HostFinger,
   Sortlist,
@@ -11,17 +11,21 @@ import {
   Team2,
   Team1,
 } from "../../../assets";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Team = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full bg-gradient-to-r from-[#121212] via-[#141414] to-[#25246b]  text-white ">
       <div className="mx-auto max-w-screen-xl p-4 md:p-10 ">
         <div className="py-10">
-          <h1 className="text-center text-4xl  font-bold">
+          <h1 className="text-center text-4xl  font-bold " data-aos="fade-up">
             Imagine that for only $9600 <br /> per month, you can get
           </h1>
         </div>
-        <div className="relative">
+        <div className="relative" data-aos="fade-up" data-aos-duration="2000">
           <div className="h-84 w-full rounded-md bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5">
             <div className=" flex  h-full w-full flex-col gap-10 rounded-md bg-[#121212] p-3 pt-6  md:p-20">
               <h1 className="text-md md:text-3xl">

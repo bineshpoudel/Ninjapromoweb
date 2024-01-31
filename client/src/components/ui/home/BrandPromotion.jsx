@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Credible, Htx, Intellectsoft, Stockmusic } from "../../../assets";
 import { CgArrowRight } from "react-icons/cg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BrandPromotion = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const brandData = [
     {
       brand: Credible,
@@ -24,7 +29,7 @@ const BrandPromotion = () => {
   return (
     <div className="w-full bg-gradient-to-r from-[#121212] via-[#141414] to-[#25246b]  text-white ">
       <div className="mx-auto max-w-screen-xl p-4 md:p-10 ">
-        <div className="relative">
+        <div className="relative" data-aos="fade-up" data-aos-duration="2000">
           <div className="h-84 w-full rounded-md bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5">
             <div className=" flex  h-full w-full flex-col gap-10 rounded-md bg-[#121212] p-3 pt-6  md:p-20">
               <div className="flex gap-5">

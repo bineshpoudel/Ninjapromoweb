@@ -9,6 +9,10 @@ const Awards = () => {
     (award) => award.award === "blockchainmarketing",
   );
 
+  const fineTechAwards = AwardsData.filter(
+    (award) => award.award === "fintechmarketing",
+  );
+
   return (
     <div className="w-full  bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-10">
@@ -16,13 +20,10 @@ const Awards = () => {
           <h1 className="py-10 text-3xl">Digital Marketing Awards</h1>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
             {digitalMarketingAwards.map((award) => (
-              <div className="flex flex-col gap-4 rounded-br-3xl rounded-tl-3xl border p-2">
-                <div
-                  key={award.id}
-                  className="flex flex-col items-center justify-center gap-4 rounded-br-3xl rounded-tl-xl border border-dotted "
-                >
-                  <img src={award.img} className="h-14" alt="" />
-                  <p className="p-2 text-center">{award.desc}</p>
+              <div className="rounded-br-3xl rounded-tl-3xl border border-gray-500 p-2">
+                <div className="flex flex-col items-center justify-center gap-3 rounded-br-3xl  rounded-tl-3xl border border-dotted p-5">
+                  <img src={award.img} alt="" />
+                  <p className="text-center">{award.desc}</p>
                 </div>
               </div>
             ))}
@@ -30,12 +31,9 @@ const Awards = () => {
           <h1 className="py-10 text-3xl">Blockchain Marketing Agency Award</h1>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
             {blockChainMarketingAwards.map((award) => (
-              <div className="flex flex-col gap-4 rounded-br-3xl rounded-tl-3xl border p-2">
-                <div
-                  key={award.id}
-                  className="flex flex-col items-center justify-center gap-4 rounded-br-3xl rounded-tl-xl border border-dotted p-1"
-                >
-                  <img src={award.img} className="h-14" alt="" />
+              <div className="rounded-br-3xl rounded-tl-3xl border border-gray-500 p-2">
+                <div className="flex flex-col items-center justify-center gap-3 rounded-br-3xl  rounded-tl-3xl border border-dotted p-5">
+                  <img src={award.img} alt="" className="h-20" />
                   <p className="text-center">{award.desc}</p>
                 </div>
               </div>
@@ -43,13 +41,10 @@ const Awards = () => {
           </div>
           <h1 className="py-10 text-3xl">Finetech Marketing Awards</h1>
           <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
-            {blockChainMarketingAwards.map((award) => (
-              <div className="flex flex-col items-center justify-center rounded-br-3xl rounded-tl-3xl border p-2">
-                <div
-                  key={award.id}
-                  className="flex flex-col items-center justify-center gap-4 rounded-br-3xl rounded-tl-xl border border-dotted p-1"
-                >
-                  <img src={award.img} className="h-14" alt="" />
+            {fineTechAwards.map((award) => (
+              <div className="rounded-br-3xl rounded-tl-3xl border border-gray-500 p-2">
+                <div className="flex flex-col items-center justify-center gap-3 rounded-br-3xl  rounded-tl-3xl border border-dotted p-5">
+                  <img src={award.img} alt="" className="h-20" />
                   <p className="text-center">{award.desc}</p>
                 </div>
               </div>

@@ -37,7 +37,7 @@ const Faq = () => {
         <img
           src="https://ninjapromo.io/wp-content/themes/ninjapromo/assets/newdesign/faq_line-bg.svg"
           alt=""
-          className="w-full md:w-96"
+          className="w-96"
         />
         <div className=" w-full md:w-[50%] ">
           {faqData.map((item, index) => (
