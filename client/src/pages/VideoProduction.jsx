@@ -2,6 +2,7 @@ import React from "react";
 import {
   Banner,
   Introduction,
+  Faq,
   LatestVideoUpdates,
   VideoProductionExamples,
   VideoProductionProcess,
@@ -23,6 +24,7 @@ const VideoProduction = () => {
       <Partners />
       <VideoProductionProcess />
       <LatestVideoUpdates />
+      <Faq />
       <HappyClients />
       <GrowJourney />
     </div>

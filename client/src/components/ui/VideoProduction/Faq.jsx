@@ -47,7 +47,7 @@ const Faq = () => {
     <div className="w-full">
       <div className="mx-auto max-w-screen-xl p-10">
         <h1 className="pb-20 text-center text-3xl md:text-5xl">
-          Frequently Asked Questions (FAQs)
+          Video Production FAQs
         </h1>
         <div className="mx-auto w-full md:w-[70%]">
           {faqData.map((item, index) => (

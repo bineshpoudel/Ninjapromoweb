@@ -10,12 +10,14 @@ import {
   VideoProduction,
   FacebookAdsAgency,
 } from "./pages";
+import MainFooter from "./components/MainFooter";
 
 const Layout = () => {
   return (
     <div>
       <Header />
       <Outlet />
+      <MainFooter />
     </div>
   );
 };
