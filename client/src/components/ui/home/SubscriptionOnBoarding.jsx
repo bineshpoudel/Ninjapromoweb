@@ -28,7 +28,11 @@ const SubscriptionOnBoarding = () => {
           </div>
           <div className="grid grid-cols-12 items-start gap-5 px-10 lg:gap-20">
             <div className="col-span-12 lg:col-span-6 ">
-              <div className="flex flex-col gap-5">
+              <div
+                className="flex flex-col gap-5"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+              >
                 <p className="text-lg md:text-2xl">
                   A skilled marketing strategist, experienced in your industry,
                   will join your team
@@ -41,7 +45,11 @@ const SubscriptionOnBoarding = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-6">
+            <div
+              className="col-span-12 md:col-span-6"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
               <img
                 src={Strategist}
                 alt="strategist"
@@ -49,7 +57,11 @@ const SubscriptionOnBoarding = () => {
               />
             </div>
             <div className="col-span-12 md:col-span-6 ">
-              <div className="flex flex-col gap-5">
+              <div
+                className="flex flex-col gap-5"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+              >
                 <p className="text-lg md:text-2xl">
                   You'll have accest-2xls to 40 expert hours to use as you see
                   fit
@@ -63,7 +75,11 @@ const SubscriptionOnBoarding = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-12 p-5 md:col-span-6">
+            <div
+              className="col-span-12 p-5 md:col-span-6"
+              data-aos="fade-left"
+              data-aos-duration="1200"
+            >
               <img
                 src={AccessImg}
                 alt="accessiblethings"
@@ -71,7 +87,11 @@ const SubscriptionOnBoarding = () => {
               />
             </div>
             <div className="col-span-12 md:col-span-6">
-              <div className="flex flex-col gap-5">
+              <div
+                className="flex flex-col gap-5"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+              >
                 <p className="text-lg md:text-2xl">
                   At the end of each week, you'll get a report that clearly
                   outlines what was achieved and how many hours were used
@@ -86,6 +106,8 @@ const SubscriptionOnBoarding = () => {
             <div className="col-span-12 md:col-span-6">
               <img
                 src={ReportImg}
+                data-aos="fade-left"
+                data-aos-duration="1200"
                 alt="reports"
                 className="duration-500 hover:scale-110"
               />

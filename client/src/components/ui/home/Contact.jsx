@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "../../form/Form";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Contact = () => {
   return (
     <div className="w-full bg-[#121212] py-20 text-white">

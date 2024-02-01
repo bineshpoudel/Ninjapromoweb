@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BuildingLocalOnline,
   CriticalKeyboard,
@@ -8,8 +8,13 @@ import {
   Serp,
   TechnicalOnline,
 } from "../../../assets";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const SeoServiceDetails = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const serviceDetails = [
     {
       img: IndepthSeo,
@@ -48,7 +53,12 @@ const SeoServiceDetails = () => {
     },
   ];
   const renderDetails = serviceDetails.map((data) => (
-    <div key={data.detail} className="w-full p-3 md:p-5 ">
+    <div
+      key={data.detail}
+      className="w-full p-3 md:p-5 "
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <div className="flex flex-col items-center justify-center gap-5">
         <img src={data.img} alt={data.detail} className="w-20" />
         <p className="text-center">{data.detail}</p>
@@ -59,7 +69,11 @@ const SeoServiceDetails = () => {
     <div className="w-full py-10 font-light  text-black">
       <div className="mx-auto max-w-screen-xl p-10">
         <div className="py-10">
-          <h1 className="text-center text-3xl font-medium">
+          <h1
+            className="text-center text-3xl font-medium"
+            data-aos="fade-up"
+            data-aos-duration="1800"
+          >
             Our SEO Agency Can Help You By:
           </h1>
         </div>
@@ -68,11 +82,15 @@ const SeoServiceDetails = () => {
         </div>
 
         <div>
-          <h1 className="py-10 text-2xl font-semibold md:text-4xl">
+          <h1
+            className="py-10 text-2xl font-semibold md:text-4xl"
+            data-aos="fade-up"
+            data-aos-duration="1800"
+          >
             Never underestimate the power of SEO marketing
           </h1>
           <div className="flex flex-col gap-10">
-            <p>
+            <p data-aos="fade-up" data-aos-duration="2000">
               If SEO isn't already a core part of your digital marketing
               strategy, it needs to be. It should be seen as an investment, not
               a cost, and the potential return on that investment can be huge.
@@ -80,7 +98,7 @@ const SeoServiceDetails = () => {
               to billions of people around the world who are actively looking
               for a product or service like yours?
             </p>
-            <p>
+            <p data-aos="fade-up" data-aos-duration="2000">
               49% of marketers report that organic search has the best ROI of
               any marketing channel, and it's not hard to see why. But getting
               your site to show up on the first page of Google is not as simple

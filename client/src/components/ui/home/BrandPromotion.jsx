@@ -55,6 +55,8 @@ const BrandPromotion = () => {
                 {brandData.map((data, index) => (
                   <div
                     key={index}
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
                     className={`col-span-12 flex flex-col gap-5 rounded-md border border-gray-500 bg-gradient-to-r from-[#1d1d1d] to-[#2b2b2b] p-10 md:col-span-6 ${
                       index < 2 ? "w-full md:w-auto" : "hidden md:flex"
                     }`}

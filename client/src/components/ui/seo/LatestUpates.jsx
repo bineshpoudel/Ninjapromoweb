@@ -1,15 +1,15 @@
 import React from "react";
-import { SaasSEOAgency } from "../../../assets";
 import LatestUpdates from "../../../data/LatestUpdates";
 
 const LatestUpates = () => {
   const renderLatestUpdates = LatestUpdates.map((update) => (
-    <div
-      key={update.id}
-      className=" group flex w-full flex-col gap-3 overflow-hidden "
-    >
-      <div className=" duration-500 group-hover:scale-110  ">
-        <img src={update.image} alt={update.img} className="h-48 w-full" />
+    <div key={update.id} className=" group flex w-full flex-col gap-3 ">
+      <div className=" overflow-hidden duration-500 group-hover:rounded-br-3xl group-hover:rounded-tl-3xl">
+        <img
+          src={update.image}
+          alt={update.img}
+          className="h-48 w-full duration-500  group-hover:scale-110 group-hover:rounded-tl-3xl"
+        />
       </div>
 
       <div className="flex gap-5 text-xs text-gray-500">

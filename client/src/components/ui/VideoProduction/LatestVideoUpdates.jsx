@@ -3,16 +3,12 @@ import LatestVideoUpdatesData from "../../../data/LatestVideoUpdates";
 
 const LatestVideoUpdates = () => {
   const renderLatestVUpdates = LatestVideoUpdatesData.map((update) => (
-    <div
-      key={update.id}
-      className="  group flex w-full flex-col gap-3 overflow-hidden  "
-    >
-      <div className=" bg-cover bg-no-repeat duration-500 group-hover:scale-110 group-hover:rounded-br-3xl group-hover:rounded-tl-3xl   ">
+    <div key={update.id} className=" group flex w-full flex-col gap-3 ">
+      <div className=" overflow-hidden duration-500 group-hover:rounded-br-3xl group-hover:rounded-tl-3xl">
         <img
           src={update.image}
           alt={update.img}
-          className="h-48 w-full 
-      "
+          className="h-48 w-full duration-500  group-hover:scale-110 group-hover:rounded-tl-3xl"
         />
       </div>
 

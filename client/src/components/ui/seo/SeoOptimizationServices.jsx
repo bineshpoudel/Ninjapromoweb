@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PiNavigationArrowFill } from "react-icons/pi";
 import { PiStarFourFill } from "react-icons/pi";
 import { GiPolarStar } from "react-icons/gi";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const CryptoSeo = () => (
   <div className="flex flex-col items-start gap-5 px-20 py-10 text-left">
     <h2 className="text-3xl">Crypto SEO</h2>
@@ -129,6 +131,9 @@ const EcommerceSeo = () => (
 );
 
 const SeoOptimizationServices = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [selectedSeo, setSelectedSeo] = useState("crypto");
 
   const handleButtonClick = (seoType) => {
@@ -161,8 +166,18 @@ const SeoOptimizationServices = () => {
   return (
     <div className="w-full py-20 font-light text-[#212121]">
       <div className=" mx-auto max-w-screen-xl py-20  text-center  font-normal">
-        <h1 className="text-4xl">Our Seo Optimization Services</h1>
-        <div className="flex flex-col items-center justify-between md:flex-row">
+        <h1
+          className="text3xl pb-10 md:text-5xl"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          Our Seo Optimization Services
+        </h1>
+        <div
+          className="flex flex-col items-center justify-between md:flex-row"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
           <div className="flex flex-col gap-5">
             <div
               onClick={() => handleButtonClick("crypto")}

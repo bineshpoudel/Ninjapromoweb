@@ -4,8 +4,13 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Review = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const Reviews = ReviewData;
 
   // Create a ref to access slick methods
@@ -52,7 +57,12 @@ const Review = () => {
   };
 
   const renderReview = Reviews.map((data, index) => (
-    <div key={index} className="flex h-96 border-r border-white">
+    <div
+      key={index}
+      className="flex h-96 border-r border-white"
+      data-aos="fade-left"
+      data-aos-duration="2000"
+    >
       <div className="flex flex-col gap-5 p-5">
         <div>
           <img className="h-10" src={data.company} alt="" />
@@ -82,7 +92,13 @@ const Review = () => {
   return (
     <div className="w-full bg-[#121212] py-10 text-white">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h2 className="pb-10 text-2xl md:text-5xl">What people are saying</h2>
+        <h2
+          className="pb-10 text-2xl md:text-5xl"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
+          What people are saying
+        </h2>
         <div className="relative flex flex-col gap-20">
           <Slider ref={sliderRef} {...settings}>
             {renderReview}

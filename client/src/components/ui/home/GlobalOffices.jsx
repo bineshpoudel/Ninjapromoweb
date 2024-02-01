@@ -8,6 +8,8 @@ const GlobalOffices = () => {
   }, []);
   const renderOffices = OfficeData.map((office) => (
     <div
+      data-aos="fade-left"
+      data-aos-duration="2000"
       key={office.id}
       className="w-3/6 flex-shrink-0 border-r border-r-gray-700 bg-[#181818] md:w-1/6 "
     >

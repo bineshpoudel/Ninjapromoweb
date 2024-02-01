@@ -135,7 +135,11 @@ const MarketingServices = () => {
                 </div>
               </div>
               <div className=" hidden  gap-7 lg:flex lg:items-center">
-                <p className="text-3xl font-bold">
+                <p
+                  className="text-3xl font-bold"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                >
                   Your Ninja Promo <br />
                   <span
                     className="bg-gradient-to-r from-rose-400 via-fuchsia-500 
@@ -150,6 +154,8 @@ const MarketingServices = () => {
                   <p
                     className={`cursor-pointer ${selectedService === "strategy" ? gradientTextClasses : ""} `}
                     onClick={() => handleServiceClick("strategy")}
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
                   >
                     Strategy
                   </p>
@@ -160,23 +166,31 @@ const MarketingServices = () => {
                         : " "
                     }`}
                     onClick={() => handleServiceClick("development")}
+                    data-aos="fade-up"
+                    data-aos-duration="1400"
                   >
                     Development
                   </p>
                   <p
                     className={`cursor-pointer  ${selectedService === "designandcreative" ? gradientTextClasses : ""}`}
                     onClick={() => handleServiceClick("designandcreative")}
+                    data-aos="fade-up"
+                    data-aos-duration="1600"
                   >
                     Design and Creative{" "}
                   </p>
                   <p
                     className={`cursor-pointer ${selectedService === "digital" ? gradientTextClasses : ""}`}
                     onClick={() => handleServiceClick("digital")}
+                    data-aos="fade-up"
+                    data-aos-duration="1800"
                   >
                     Digital
                   </p>
                   <p
                     onClick={() => handleServiceClick("analytics")}
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
                     className={`cursor-pointer ${selectedService === "analytics" ? gradientTextClasses : ""}`}
                   >
                     Analytics

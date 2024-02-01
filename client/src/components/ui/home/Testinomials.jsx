@@ -11,6 +11,8 @@ const Testinomials = () => {
   }, []);
   const RenderTestinomials = TestinomialData.map((data) => (
     <div
+      data-aos="fade-left"
+      data-aos-duration="1200"
       className="flex flex-col gap-20 rounded-lg
        border border-[#525252] bg-gradient-to-r from-[#1d1d1d] to-[#2b2b2b] p-6"
     >

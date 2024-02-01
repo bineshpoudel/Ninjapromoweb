@@ -1,11 +1,16 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import PartnersData from "../data/PartnersData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Partners = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const sliderRef = useRef(null);
 
   const settings = {
@@ -39,12 +44,21 @@ const Partners = () => {
   return (
     <div className="w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h1 className="py-20 pb-10 text-center text-4xl">
+        <h1
+          className="py-20 pb-10 text-center text-4xl"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
           Our Partners are backed up with the best
         </h1>
         <Slider ref={sliderRef} {...settings}>
           {PartnersData.map((data) => (
-            <div key={data.id} className="w-1/5">
+            <div
+              key={data.id}
+              className="w-1/5"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
               <img src={data.img} alt="" className="h-14" />
             </div>
           ))}

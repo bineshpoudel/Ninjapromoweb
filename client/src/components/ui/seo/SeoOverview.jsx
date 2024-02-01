@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SeoMonitor } from "../../../assets";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const SeoOverview = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full font-light text-black ">
       <div className="mx-auto max-w-screen-xl p-10">
@@ -11,7 +15,11 @@ const SeoOverview = () => {
           <span className="text-[#4cbe93]">Search Engine Optimization </span>
         </div>
         <div className="pt-20">
-          <h1 className="pb-10 text-4xl">
+          <h1
+            className="pb-10 text-4xl"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Partner with an SEO company that breaks the <br /> boundaries of
             search engine optimization
           </h1>
@@ -21,7 +29,7 @@ const SeoOverview = () => {
             </div>
 
             <div className="text-md flex w-full flex-col gap-3 text-[#121212]  md:w-3/5">
-              <p>
+              <p data-aos="fade-up" data-aos-duration="2200">
                 Search engine optimization is no longer about cramming your
                 content with keywords and hoping for the best. It's a complex
                 and ever-evolving field that requires a deep understanding of
@@ -30,7 +38,7 @@ const SeoOverview = () => {
                 needs. But with the right SEO agency as your partner, it doesn't
                 have to be so complicated.
               </p>
-              <p>
+              <p data-aos="fade-up" data-aos-duration="2400">
                 At NinjaPromo, we like to think of ourselves as SEO hackers.
                 We're always looking for new and innovative ways to get our
                 clients' content in front of the people who search for it. We
@@ -38,7 +46,7 @@ const SeoOverview = () => {
                 dirty and do the hard work that it takes to get results. It's
                 not magic, but it is art.
               </p>
-              <p>
+              <p data-aos="fade-up" data-aos-duration="2600">
                 We start by taking the time to form a deep understanding of your
                 business, ensuring we're well versed on your story, your goals,
                 and your challenges. But most importantly, we want to learn all

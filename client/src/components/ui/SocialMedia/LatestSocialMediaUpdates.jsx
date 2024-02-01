@@ -3,15 +3,12 @@ import LatestSocialMediaUpdatesData from "../../../data/LatestSocialMediaUpdates
 const LatestSocialMediaUpdates = () => {
   const renderLatestSocialMediaUpdates = LatestSocialMediaUpdatesData.map(
     (update) => (
-      <div
-        key={update.id}
-        className=" group flex w-full flex-col gap-3 overflow-hidden "
-      >
-        <div className="duration-500 group-hover:scale-110">
+      <div key={update.id} className=" group flex w-full flex-col gap-3 ">
+        <div className=" overflow-hidden duration-500 group-hover:rounded-br-3xl group-hover:rounded-tl-3xl">
           <img
             src={update.image}
-            alt={update.img}
-            className="h-48 w-full rounded-br-3xl rounded-tl-3xl "
+            alt={update.desc}
+            className="h-48 w-full duration-500  group-hover:scale-110 group-hover:rounded-tl-3xl"
           />
         </div>
 
