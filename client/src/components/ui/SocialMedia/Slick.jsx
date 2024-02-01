@@ -5,7 +5,7 @@ import CaseStudiesData from "../../../data/CaseStudiesData";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { HiOutlineArrowSmallRight } from "react-icons/hi2";
 
-const CaseStudies = () => {
+const Slick = () => {
   const sliderRef = useRef(null);
 
   const settings = {
@@ -102,4 +102,4 @@ const CaseStudies = () => {
   );
 };
 
-export default CaseStudies;
+export default Slick;

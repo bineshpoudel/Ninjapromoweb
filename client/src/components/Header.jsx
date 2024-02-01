@@ -13,7 +13,7 @@ const Header = () => {
   const renderSidebar = () => {
     return (
       <div className="fixed right-0 top-0 z-40 h-full w-96 bg-black ">
-        <div className="border">
+        <div>
           <div className="size-8 p-5">
             <IoMdClose className="text-2xl" onClick={handleSidebar} />
           </div>
@@ -25,6 +25,23 @@ const Header = () => {
               Seo <hr />
             </li>
             <li>
+              Web Design
+              <hr />
+            </li>
+            <li>
+              Mobile App Design
+              <hr />
+            </li>
+            <li>
+              Video Production <hr />
+            </li>
+            <li>
+              Social Media <hr />
+            </li>
+            <li>
+              Facebook Ads <hr />
+            </li>
+            <li>
               About <hr />
             </li>
           </ul>
@@ -34,9 +51,9 @@ const Header = () => {
   };
 
   return (
-    <div className="h-20 w-full bg-gradient-to-br from-[#242368] to-[#212057] text-white transition  duration-500 hover:bg-[#121212] hover:bg-gradient-to-r hover:from-[#121212] hover:to-[#121212] lg:bg-gradient-to-r lg:from-[#25246B] lg:to-[#121213]">
-      <div className="mx-auto max-w-screen-xl p-4  sm:p-4 md:px-10 md:py-4">
-        <div className="flex items-center justify-between ">
+    <div className="fixed top-0 z-50 h-20 w-full bg-gradient-to-br from-[#242368] to-[#212057] text-white transition  duration-500 hover:bg-[#121212] hover:bg-gradient-to-r hover:from-[#121212] hover:to-[#121212] lg:bg-gradient-to-r lg:from-[#25246B] lg:to-[#121213]">
+      <div className="mx-auto max-w-screen-xl  p-4 sm:p-4 md:px-10 md:py-4">
+        <div className="flex items-center justify-between">
           <div className=" flex items-center gap-4">
             <Link to="/">
               <img src={LogoSvg} alt="logo" />

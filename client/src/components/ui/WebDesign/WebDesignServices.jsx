@@ -30,13 +30,21 @@ const WebDesignServices = () => {
               <div
                 className={`flex flex-col items-center gap-5 md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
               >
-                <div className="">
+                <div className="w-full md:w-2/3">
                   <img src={service.serviceImg} alt="" className="rounded-md" />
                 </div>
                 <div className="flex w-full flex-col gap-5 md:w-2/3">
-                  <img src={service.logo} alt="" className="size-12 " />
+                  {service.logo && (
+                    <img src={service.logo} alt="" className="size-12 " />
+                  )}
+
                   <h1 className="text-2xl">{service.title}</h1>
-                  <p className="text-xs">{service.desc}</p>
+                  {service.desc.map((para, index) => (
+                    <p key={index} className="text-xs">
+                      {para}
+                    </p>
+                  ))}
+
                   <div className="md:items-left  items-center">
                     <button className="bg-blue-700 px-5 py-2 text-white md:px-20 md:py-5">
                       Learn More

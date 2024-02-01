@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import ServedIndustryData from "../../../data/ServedIndustryData";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Slider from "react-slick";
 const IndustriesServed = () => {
+  const sliderRef = useRef(null);
+
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const handlePrevClick = () => {
+    sliderRef.current.slickPrev();
+  };
+
+  const handleNextClick = () => {
+    sliderRef.current.slickNext();
   };
   return (
     <div className="w-full bg-[#F5F5F9] py-20">
@@ -24,7 +45,7 @@ const IndustriesServed = () => {
         </p>
         {/* For Card Components */}
         <div className="">
-          <Slider {...settings}>
+          <Slider ref={sliderRef} {...settings}>
             {ServedIndustryData.map((industry) => (
               <div className="flex flex-col gap-5 rounded-md bg-white">
                 <img src={industry.img} alt="" />
@@ -38,6 +59,16 @@ const IndustriesServed = () => {
               </div>
             ))}
           </Slider>
+        </div>
+        <div className="flex cursor-pointer gap-3 py-10">
+          <GoArrowLeft
+            className="size-12 cursor-pointer rounded-full bg-[#FAFAFC] p-2 text-gray-600 duration-200 hover:bg-white hover:text-gray-500"
+            onClick={handlePrevClick}
+          />
+          <GoArrowRight
+            className="size-12 cursor-pointer  rounded-full bg-[#FAFAFC] p-2 text-gray-600 duration-200 hover:bg-white hover:text-gray-500"
+            onClick={handleNextClick}
+          />
         </div>
       </div>
     </div>

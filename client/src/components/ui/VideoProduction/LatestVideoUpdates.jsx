@@ -5,9 +5,9 @@ const LatestVideoUpdates = () => {
   const renderLatestVUpdates = LatestVideoUpdatesData.map((update) => (
     <div
       key={update.id}
-      className=" group flex w-full flex-col gap-3 overflow-hidden  "
+      className="  group flex w-full flex-col gap-3 overflow-hidden  "
     >
-      <div className="duration-500 group-hover:scale-110 group-hover:rounded-br-3xl group-hover:rounded-tl-3xl   ">
+      <div className=" bg-cover bg-no-repeat duration-500 group-hover:scale-110 group-hover:rounded-br-3xl group-hover:rounded-tl-3xl   ">
         <img
           src={update.image}
           alt={update.img}
