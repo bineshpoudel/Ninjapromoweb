@@ -93,7 +93,7 @@ const MarketingServices = () => {
   const gradientTextClasses = `bg-gradient-to-r from-rose-400 via-fuchsia-500 
     to-indigo-500 bg-clip-text text-transparent`;
   return (
-    <div className="w-full bg-gradient-to-r from-[#191919] to-[#282828]  text-white ">
+    <div className="w-full bg-gradient-to-br from-[#121212] via-[#1B1A39] to-[#282828]  text-white ">
       <div className="mx-auto max-w-screen-xl p-4 md:p-10 ">
         <div className="relative " data-aos="fade-up" data-aos-duration="2000">
           <div className="h-84 w-full rounded-md bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5">
@@ -150,53 +150,63 @@ const MarketingServices = () => {
                   </span>
                 </p>
                 <img src={FiveArrow} alt="" className="hidden lg:block" />
-                <div className=" flex flex-col gap-7 text-xl font-bold  ">
-                  <p
-                    className={`cursor-pointer ${selectedService === "strategy" ? gradientTextClasses : ""} `}
-                    onClick={() => handleServiceClick("strategy")}
-                    data-aos="fade-up"
-                    data-aos-duration="1200"
-                  >
-                    Strategy
-                  </p>
-                  <p
-                    className={`cursor-pointer ${
-                      selectedService === "development"
-                        ? gradientTextClasses
-                        : " "
-                    }`}
-                    onClick={() => handleServiceClick("development")}
-                    data-aos="fade-up"
-                    data-aos-duration="1400"
-                  >
-                    Development
-                  </p>
-                  <p
-                    className={`cursor-pointer  ${selectedService === "designandcreative" ? gradientTextClasses : ""}`}
-                    onClick={() => handleServiceClick("designandcreative")}
-                    data-aos="fade-up"
-                    data-aos-duration="1600"
-                  >
-                    Design and Creative{" "}
-                  </p>
-                  <p
-                    className={`cursor-pointer ${selectedService === "digital" ? gradientTextClasses : ""}`}
-                    onClick={() => handleServiceClick("digital")}
-                    data-aos="fade-up"
-                    data-aos-duration="1800"
-                  >
-                    Digital
-                  </p>
-                  <p
-                    onClick={() => handleServiceClick("analytics")}
-                    data-aos="fade-up"
-                    data-aos-duration="2000"
-                    className={`cursor-pointer ${selectedService === "analytics" ? gradientTextClasses : ""}`}
-                  >
-                    Analytics
-                  </p>
+                <div
+                  className=" flex flex-col gap-7 text-xl font-bold  "
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
+                  <div data-aos="fade-up" data-aos-duration="1200">
+                    <p
+                      className={`cursor-pointer ${selectedService === "strategy" ? gradientTextClasses : ""} `}
+                      onClick={() => handleServiceClick("strategy")}
+                    >
+                      Strategy
+                    </p>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="1200">
+                    <p
+                      className={`cursor-pointer ${
+                        selectedService === "development"
+                          ? gradientTextClasses
+                          : " "
+                      }`}
+                      onClick={() => handleServiceClick("development")}
+                    >
+                      Development
+                    </p>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="1500">
+                    <p
+                      className={`cursor-pointer  ${selectedService === "designandcreative" ? gradientTextClasses : ""}`}
+                      onClick={() => handleServiceClick("designandcreative")}
+                    >
+                      Design and Creative{" "}
+                    </p>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="1800">
+                    <p
+                      className={`cursor-pointer ${selectedService === "digital" ? gradientTextClasses : ""}`}
+                      onClick={() => handleServiceClick("digital")}
+                    >
+                      Digital
+                    </p>
+                  </div>
+                  <div data-aos="fade-up" data-aos-duration="2100">
+                    <p
+                      onClick={() => handleServiceClick("analytics")}
+                      className={`cursor-pointer ${selectedService === "analytics" ? gradientTextClasses : ""}`}
+                    >
+                      Analytics
+                    </p>
+                  </div>
                 </div>
-                <div className="relative">{renderService()}</div>
+                <div
+                  className="relative"
+                  data-aos="fade-right"
+                  data-aos-duration="2500"
+                >
+                  {renderService()}
+                </div>
               </div>
             </div>
           </div>

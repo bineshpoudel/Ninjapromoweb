@@ -3,15 +3,16 @@ import { IoMdPlay } from "react-icons/io";
 import VideoProductionExamplesData from "../../../data/VideoProductionExamples";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrimaryBtn from "../../PrimaryBtn";
 const VideoProductionExamples = () => {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <div className="w-full bg-[#121212] text-white">
-      <div className="mx-auto max-w-screen-xl p-10">
+      <div className="mx-auto max-w-screen-xl p-5 md:p-10">
         <h1
-          className="pt-10 text-2xl md:text-5xl"
+          className="pt-10 text-center text-3xl md:text-5xl"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
@@ -30,6 +31,8 @@ const VideoProductionExamples = () => {
               src={video.img}
               alt=""
               className="h-full w-full object-cover transition-opacity group-hover:opacity-75"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
             />
             <div className="absolute inset-x-0 bottom-5 flex items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
               <div className="flex items-center justify-center gap-5">
@@ -42,8 +45,12 @@ const VideoProductionExamples = () => {
           </div>
         ))}
       </div>
-      <div className="py-20 text-center">
-        <button className="bg-blue-700 px-20 py-5">View our portfolio</button>
+      <div
+        className="py-20 text-center"
+        data-aos="fade-up "
+        data-aos-duration="1500"
+      >
+        <PrimaryBtn label="View our portfolio" />
       </div>
     </div>
   );

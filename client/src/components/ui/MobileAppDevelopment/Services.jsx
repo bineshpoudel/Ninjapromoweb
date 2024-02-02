@@ -65,7 +65,11 @@ const Services = () => {
               {service.desc && <p className="font-thin">{service.desc}</p>}
               {service.buttonText && (
                 <div>
-                  <button className="bg-blue-700 px-5 py-2">
+                  <button
+                    className="bg-blue-700 px-5 py-2"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                  >
                     {service.buttonText}
                   </button>
                 </div>

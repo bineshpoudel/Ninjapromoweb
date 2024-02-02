@@ -167,7 +167,7 @@ const SeoOptimizationServices = () => {
     <div className="w-full py-20 font-light text-[#212121]">
       <div className=" mx-auto max-w-screen-xl py-20  text-center  font-normal">
         <h1
-          className="text3xl pb-10 md:text-5xl"
+          className="pb-10 text-3xl md:text-5xl"
           data-aos="fade-up"
           data-aos-duration="2000"
         >

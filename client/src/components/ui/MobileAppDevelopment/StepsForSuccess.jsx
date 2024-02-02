@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import SuccessSteps from "../../../data/SuccesSteps";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrimaryBtn from "../../PrimaryBtn";
 const StepsForSuccess = () => {
   useEffect(() => {
     AOS.init();
@@ -44,9 +45,10 @@ const StepsForSuccess = () => {
           data-aos="zoom-in"
           data-aos-duration="1500"
         >
-          <button className="bg-blue-700 px-10 py-4 text-white">
+          {/* <button className="bg-blue-700 px-10 py-4 text-white">
             Get a proposol
-          </button>
+          </button> */}
+          <PrimaryBtn label={"Get a proposal"} />
         </div>
       </div>
     </div>

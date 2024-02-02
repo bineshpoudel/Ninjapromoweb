@@ -11,7 +11,7 @@ const PromoSection = () => {
       <div className="mx-auto max-w-screen-xl p-10">
         <div className="text-md flex flex-col gap-10 font-thin">
           <h1
-            className="text-2xl font-normal md:text-5xl"
+            className="text-3xl font-normal md:text-5xl"
             data-aos="fade-up"
             data-aos-duration="1200"
           >

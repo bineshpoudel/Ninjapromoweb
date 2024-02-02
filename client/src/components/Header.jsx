@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LogoSvg } from "../assets";
 import { RiMenu3Fill } from "react-icons/ri";
 import { SlArrowDown } from "react-icons/sl";
@@ -6,12 +6,6 @@ import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 const Header = () => {
   const [sideBar, setSidebar] = useState(false);
-  const handleSidebar = () => {
-    setSidebar(!sideBar);
-  };
-  const closeSidebar = () => {
-    setSidebar(false);
-  };
 
   const renderSidebar = () => {
     return (
@@ -71,10 +65,35 @@ const Header = () => {
       </div>
     );
   };
+  const handleSidebar = () => {
+    setSidebar(!sideBar);
+  };
+  const closeSidebar = () => {
+    setSidebar(false);
+  };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="fixed top-0 z-50 h-20 w-full bg-gradient-to-br from-[#242368] to-[#212057] text-white transition  duration-500 hover:bg-[#121212] hover:bg-gradient-to-r hover:from-[#121212] hover:to-[#121212] lg:bg-gradient-to-r lg:from-[#25246B] lg:to-[#121213]">
-      <div className="mx-auto max-w-screen-xl  p-4 sm:p-4 md:px-10 md:py-4">
+    <div
+      className={`fixed top-0 z-50 h-20 w-full hover:bg-[#121212] ${
+        isScrolled
+          ? "bg-[#121212] bg-opacity-100  md:bg-gray-500 md:bg-opacity-75"
+          : "bg-transparent"
+      } text-white`}
+    >
+      <div className="mx-auto max-w-screen-xl  p-4  sm:p-4 md:px-10 md:py-4">
         <div className="flex items-center justify-between">
           <div className=" flex items-center gap-4">
             <Link to="/">
@@ -83,7 +102,7 @@ const Header = () => {
 
             {/* <p className="font-thin">Marketing by Subscription</p> */}
           </div>
-          <div className="flex h-8 w-12 items-center justify-center rounded-br-xl  rounded-tl-xl bg-[#121212] lg:hidden">
+          <div className="flex h-8 w-12 items-center justify-center rounded-br-xl  rounded-tl-xl bg-gray-700 lg:hidden">
             <RiMenu3Fill className="text-2xl" onClick={handleSidebar} />
           </div>
           <div className="hidden text-sm lg:flex lg:gap-12 ">

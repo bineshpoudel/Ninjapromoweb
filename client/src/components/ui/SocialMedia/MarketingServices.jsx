@@ -3,6 +3,7 @@ import OrganicMarketingServices from "../../../data/OrganicSocialMarketingServic
 import PaidSocialMarketingServices from "../../../data/PaidSocialMarketingServices";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrimaryBtn from "../../PrimaryBtn";
 const MarketingServices = () => {
   useEffect(() => {
     AOS.init();
@@ -11,7 +12,7 @@ const MarketingServices = () => {
     <div className="w-full">
       <div className="mx-auto max-w-screen-xl p-10">
         <h1
-          className="flex flex-col items-center justify-center py-5 text-center text-3xl font-semibold md:flex-row md:text-5xl"
+          className="flex flex-col items-center justify-center py-5 text-center text-3xl font-semibold md:flex-row md:text-5xl "
           data-aos="fade-right"
           data-aos-duration="2000"
         >
@@ -113,7 +114,7 @@ const MarketingServices = () => {
           >
             <div className="flex flex-col gap-10">
               <h1
-                className="pt-10 text-5xl font-bold"
+                className="pt-10 text-3xl  font-bold md:text-5xl"
                 data-aos="zoom-in"
                 data-aos-duration="2000"
               >
@@ -151,7 +152,7 @@ const MarketingServices = () => {
           >
             <div className="flex flex-col gap-10">
               <h1
-                className="pt-10 text-5xl font-bold"
+                className="pt-10 text-3xl font-bold md:text-5xl"
                 data-aos="zoom-out"
                 data-aos-duration="2000"
               >
@@ -171,14 +172,12 @@ const MarketingServices = () => {
                 ))}
               </div>
 
-              <div className="text-bottom  text-center lg:text-right">
-                <button
-                  className="bg-blue-700 px-10 py-5 font-bold text-white md:px-20"
-                  data-aos="zoom-out"
-                  data-aos-duration="2000"
-                >
-                  Get a proposol
-                </button>
+              <div
+                className="text-bottom  text-center lg:text-right"
+                data-aos="zoom-out"
+                data-aos-duration="2000"
+              >
+                <PrimaryBtn label={"Get a proposal"} />
               </div>
             </div>
           </div>

@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrimaryBtn from "../../PrimaryBtn";
 const Banner = () => {
   useEffect(() => {
     AOS.init();
@@ -49,9 +50,7 @@ const Banner = () => {
                 data-aos="fade-up"
                 data-aos-duration="2800"
               >
-                <button className="bg-[#3C39C6] px-10 py-5 md:px-20">
-                  Get in touch
-                </button>
+                <PrimaryBtn label={"Get in touch"} />
               </div>
             </div>
             <div className="flex cursor-pointer flex-col-reverse align-text-bottom">
@@ -81,6 +80,7 @@ const Banner = () => {
           <div className="flex w-full flex-col  items-center gap-5 overflow-x-auto md:w-3/4 md:flex-row">
             {digitalMarketingAwards.map((award) => (
               <div
+                key={award.id}
                 className="min-h-24 min-w-[20rem] rounded-br-3xl rounded-tl-3xl border border-gray-500 p-2"
                 data-aos="fade-left"
                 data-aos-duration="1000"

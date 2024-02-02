@@ -38,17 +38,17 @@ const BrandPromotion = () => {
                 </p>
                 <div className="flex gap-1 uppercase ">
                   {/* <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
-                  Crypto
-                </button>
-                <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
-                  Finetech
-                </button>
-                <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
-                  Saas
-                </button>
-                <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
-                  Software
-                </button> */}
+                    Crypto
+                  </button>
+                  <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
+                    Finetech
+                  </button>
+                  <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
+                    Saas
+                  </button>
+                  <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
+                    Software
+                  </button> */}
                 </div>
               </div>
               <div className="flex gap-2 overflow-x-auto md:grid md:grid-cols-12">

@@ -42,8 +42,13 @@ const CaseStudies = () => {
   return (
     <div className="rounddtr-3xl relative w-full rounded-tl-3xl bg-[#121212]  text-white">
       <div className="absolute -top-10 left-20 -skew-x-12 bg-[#3c39c6] p-5 text-white md:left-[40%]">
-        <h1 className="text-3xl font-bold">Our Case Studies</h1>
+        <h1 className="skew-x-12 text-3xl font-bold">Our Case Studies</h1>
       </div>
+      {/* <div className="absolute -top-10 left-20 -skew-x-12 bg-[#3c39c6] p-5 text-white md:left-[40%]">
+        <h1 className="skew-x-12 transform text-3xl font-bold">
+          Our Case Studies
+        </h1>
+      </div> */}
       <div className="mx-auto max-w-screen-xl p-10">
         <div
           className="flex items-center justify-between py-10"

@@ -34,7 +34,7 @@ const Faq = () => {
 
   return (
     <div className="w-full">
-      <div className="mx-auto max-w-screen-xl">
+      <div className="mx-auto max-w-screen-xl px-10">
         <h1 data-aos="fade-down" data-aos-duration="1200" className=" text-5xl">
           Social Media Marketing FAQs
         </h1>
@@ -63,7 +63,7 @@ const Faq = () => {
                 <div
                   className={`transform transition-transform ${activeItem === index ? "rotate-45 duration-500" : ""}`}
                 >
-                  <FaPlusCircle className="size-10 text-blue-700" />
+                  <FaPlusCircle className="size-10 text-[#3C39C6]" />
                 </div>
               </div>
 

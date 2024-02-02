@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import VideoTypes from "../../../data/VideoServiceTypes";
 import AOS from "aos";
+import PrimaryBtn from "../../PrimaryBtn";
 import "aos/dist/aos.css";
 const VideoProductionServices = () => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const VideoProductionServices = () => {
       <div className="mx-auto max-w-screen-xl p-10">
         <div className="flex flex-col gap-5 py-10">
           <h1
-            className="text-5xl"
+            className="text-3xl md:text-5xl"
             data-aos="fade-down"
             data-aos-duration="1000"
           >
@@ -36,10 +37,8 @@ const VideoProductionServices = () => {
             </div>
           ))}
         </div>
-        <div className="py-10">
-          <button className="bg-blue-700 px-20 py-5 text-white">
-            Request a proposol
-          </button>
+        <div className="py-10 text-center">
+          <PrimaryBtn label="Request a proposal" />
         </div>
       </div>
     </div>

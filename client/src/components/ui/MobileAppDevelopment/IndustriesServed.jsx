@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import ServedIndustries from "../../../data/IndustriesServed";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrimaryBtn from "../../PrimaryBtn";
 const IndustriesServed = () => {
   useEffect(() => {
     AOS.init();
@@ -10,7 +11,7 @@ const IndustriesServed = () => {
     <div className="w-full bg-[#F5F5F9]">
       <div className="mx-auto max-w-screen-xl p-10">
         <h1
-          className="py-10 text-3xl"
+          className="py-10 text-4xl"
           data-aos="fade-up"
           data-aos-duration="1200"
         >
@@ -45,14 +46,19 @@ const IndustriesServed = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center py-10 text-white">
-          <button
+        <div
+          className="flex justify-center py-10 text-white"
+          data-aos="zoom-in"
+          data-aos-duration="1500"
+        >
+          {/* <button
             className="text-l bg-blue-700 px-7 py-4"
             data-aos="zoom-in"
             data-aos-duration="1500"
           >
             Get a proposol
-          </button>
+          </button> */}
+          <PrimaryBtn label={"Get a proposal"} />
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import SocialMediaMarketingData from "../../../data/SocialMediaMarketingData";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrimaryBtn from "../../PrimaryBtn";
 const SocialMediaMarketing = () => {
   useEffect(() => {
     AOS.init();
@@ -84,14 +85,12 @@ const SocialMediaMarketing = () => {
               Instagram, Twitter, and Snapchat.
             </p>
 
-            <div className="w-full text-center">
-              <button
-                data-aos="zoom-in"
-                data-aos-duration="1500"
-                className=" bg-blue-700 px-10 py-5 text-white md:px-20"
-              >
-                Start now
-              </button>
+            <div
+              className="w-full text-center"
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
+              <PrimaryBtn label={"Start now"} />
             </div>
           </div>
         </div>

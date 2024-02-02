@@ -16,7 +16,7 @@ const Sajha = ({ title, label, desc }) => {
       <div className="mx-auto max-w-screen-xl p-10 py-5 md:py-20">
         <div className="items-center">
           <h1
-            className="pb-10 text-center text-2xl md:text-5xl"
+            className="pb-10 text-center text-3xl md:text-5xl"
             data-aos="fade-up"
             data-aos-duration="800"
           >

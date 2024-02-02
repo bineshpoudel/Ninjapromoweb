@@ -32,6 +32,7 @@ const Packages = () => {
 
   const renderPackage = packageDetails.map((data) => (
     <div
+      key={data.package}
       className={`group w-full rounded-md bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-600 hover:p-0.5 md:w-1/3 ${data.isActive ? "p-0.5" : ""} `}
     >
       <div

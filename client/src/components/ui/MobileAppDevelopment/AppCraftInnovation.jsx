@@ -81,8 +81,8 @@ const AppCraftInnovation = () => {
                 >
                   <div className="bg-white">
                     <img src={service.img} alt="" />
-                    <h1 className="p-3 text-lg">{service.service}</h1>
-                    <p className="p-3 text-xs">{service.desc}</p>
+                    <h1 className="p-4 text-xl">{service.service}</h1>
+                    <p className=" p-4 text-sm">{service.desc}</p>
                   </div>
                 </div>
               ))}

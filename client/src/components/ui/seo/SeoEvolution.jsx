@@ -3,6 +3,7 @@ import { IoIosGlobe } from "react-icons/io";
 import Sajha from "../../Sajha";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrimaryBtn from "../../PrimaryBtn";
 const SeoEvolution = () => {
   useEffect(() => {
     AOS.init();
@@ -69,9 +70,7 @@ const SeoEvolution = () => {
               ranking, we're here to help.
             </p>
             <div>
-              <button className="bg-[#3C39C6] px-10 py-5 font-bold text-white">
-                Book a Consulation
-              </button>
+              <PrimaryBtn label={"Book a consulation"} />
             </div>
           </div>
           <div className="absolute right-5 top-[-2rem]">

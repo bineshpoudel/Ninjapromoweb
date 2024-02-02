@@ -12,7 +12,7 @@ const FeaturedWorks = () => {
     <div className="bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-10">
         <h1
-          className="text-3xl md:text-5xl"
+          className="text-center text-3xl md:text-5xl"
           data-aos="fade-right"
           data-aos-duration="2000"
         >
