@@ -6,10 +6,11 @@ import {
   DigitalAgencyNetwork,
   Manifest,
 } from "../../../assets";
+import PrimaryBtn from "../../PrimaryBtn";
 const Banner = () => {
   return (
     <div
-      className="w-full bg-cover text-white"
+      className="w-full bg-cover py-20 text-white"
       style={{
         backgroundImage: `url("https://ninjapromo.io/wp-content/themes/ninjapromo/assets/img/hero-section/hero-bg-front.jpg")`,
       }}
@@ -27,7 +28,7 @@ const Banner = () => {
             tools at your disposal.
           </p>
           <div className="flex flex-col items-center gap-10 md:flex-row md:gap-20">
-            <button className="bg-[#3C39C6] px-20 py-5">Speak to Us</button>
+            <PrimaryBtn label={"Speak to Us"} />
             <div className=" hidden gap-2 md:flex">
               <p className="text-xl">Meet ninja promo</p>
               <div className="group flex size-8 items-center justify-center rounded-full bg-white hover:bg-[#3C39C6]">

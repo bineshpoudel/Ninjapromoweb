@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LatestUpdates from "../../../data/LatestUpdates";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const LatestUpates = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const renderLatestUpdates = LatestUpdates.map((update) => (
-    <div key={update.id} className=" group flex w-full flex-col gap-3 ">
+    <div
+      key={update.id}
+      className=" group flex w-full flex-col gap-3 "
+      data-aos="zoom-in"
+      data-aos-duration="2500"
+    >
       <div className=" overflow-hidden duration-500 group-hover:rounded-br-3xl group-hover:rounded-tl-3xl">
         <img
           src={update.image}
@@ -24,7 +34,13 @@ const LatestUpates = () => {
   return (
     <div className="w-full py-20 ">
       <div className=" mx-auto max-w-screen-xl p-10">
-        <h1 className="pb-20 text-center text-3xl">What's the latest</h1>
+        <h1
+          className="pb-20 text-center text-3xl md:text-5xl"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          What's the latest?
+        </h1>
         <div className="flex flex-col gap-5 md:grid md:grid-cols-3">
           {renderLatestUpdates}
         </div>

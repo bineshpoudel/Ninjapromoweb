@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaPlusCircle } from "react-icons/fa";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Faq = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [activeItem, setActiveItem] = useState(null);
 
   const toggleItem = (index) => {
@@ -12,7 +16,7 @@ const Faq = () => {
 
   const faqData = [
     {
-      question: "How does SEO work?",
+      question: "How does Facebook ads agency work?",
       answer:
         "SEO stands for “search engine optimization.” It's a marketing strategy that businesses use to improve their visibility and ranking in search engine results pages (SERPs). When someone makes a search using a keyword or phrase that's relevant to your business, you want your mobile and desktop web pages to appear as close to the top of the results list as possible. Some studies have shown that the vast majority of Internet users only click on results that appear on the first page of SERPs. So if you're not ranking in the top few results, you could be missing out on a lot of potential customers.To improve your ranking, businesses use on-page SEO strategies like keyword research and backlinking. Keyword research involves finding the right keywords and phrases that people are searching for when they're looking for businesses like yours. Once you've identified these keywords, you can incorporate them into your website copywriting across both desktop and mobile, to help boost your ranking. You can also perform off-page SEO, which might involve promoting your online presence via social media or other digital platforms.Backlinking is the process of getting other websites to link to your website. This helps improve your ranking because it signals to Google and Bing that your website is popular and relevant, which will lead to a positive feedback loop. The more traffic you can drive to your website, the higher your ranking will eventually be.",
     },
@@ -46,12 +50,21 @@ const Faq = () => {
   return (
     <div className="w-full">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h1 className="pb-20 text-center text-3xl md:text-5xl">
+        <h1
+          className="pb-20 text-center text-3xl md:text-5xl"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           Frequently Asked Questions (FAQs)
         </h1>
         <div className="mx-auto w-full md:w-[70%]">
           {faqData.map((item, index) => (
-            <div key={index} className="mb-4">
+            <div
+              key={index}
+              className="mb-4"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               <div
                 className="flex cursor-pointer items-center justify-between gap-10"
                 onClick={() => toggleItem(index)}

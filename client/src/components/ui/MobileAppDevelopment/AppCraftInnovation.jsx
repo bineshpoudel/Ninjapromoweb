@@ -1,12 +1,17 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import SpecialistServices from "../../../data/MobileAppSpecialistServices";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Sajha from "../../Sajha";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AppCraftInnovation = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const sliderRef = useRef(null);
 
   const settings = {
@@ -52,8 +57,14 @@ const AppCraftInnovation = () => {
       <div className="w-full bg-[#F5F5F9]">
         <div className="mx-auto max-w-screen-xl p-10">
           <div className="flex flex-col gap-5 py-10">
-            <h1 className="text-3xl">Custom Mobile App Specialists</h1>
-            <p>
+            <h1
+              className="text-3xl md:text-5xl"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
+              Custom Mobile App Specialists
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1500">
               Whether you're still at the ideation stage, in the middle of your
               app development, or already have a working solution that requires
               some improvements, our expert development team can help.
@@ -63,7 +74,11 @@ const AppCraftInnovation = () => {
           <div className="">
             <Slider {...settings} ref={sliderRef} className="m">
               {SpecialistServices.map((service) => (
-                <div key={service.id}>
+                <div
+                  key={service.id}
+                  data-aos="zoom-in"
+                  data-aos-duration="1200"
+                >
                   <div className="bg-white">
                     <img src={service.img} alt="" />
                     <h1 className="p-3 text-lg">{service.service}</h1>

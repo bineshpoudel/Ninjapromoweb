@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaPlusCircle } from "react-icons/fa";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Faq = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [activeItem, setActiveItem] = useState(null);
 
   const toggleItem = (index) => {
@@ -46,12 +50,21 @@ const Faq = () => {
   return (
     <div className="w-full">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h1 className="pb-20 text-center text-3xl md:text-5xl">
+        <h1
+          className="pb-20 text-center text-3xl md:text-5xl"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           Video Production FAQs
         </h1>
         <div className="mx-auto w-full md:w-[70%]">
           {faqData.map((item, index) => (
-            <div key={index} className="mb-4">
+            <div
+              key={index}
+              className="mb-4"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               <div
                 className="flex cursor-pointer items-center justify-between gap-10"
                 onClick={() => toggleItem(index)}

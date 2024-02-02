@@ -1,4 +1,9 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+  ScrollRestoration,
+} from "react-router-dom";
 import Header from "./components/Header";
 import {
   About,
@@ -16,6 +21,7 @@ const Layout = () => {
   return (
     <div>
       <Header />
+      <ScrollRestoration />
       <Outlet />
       <MainFooter />
     </div>
@@ -52,7 +58,7 @@ const router = createBrowserRouter([
         element: <FacebookAdsAgency />,
       },
       {
-        path: "services/web-development",
+        path: "services/web-design",
         element: <WebDesign />,
       },
       {

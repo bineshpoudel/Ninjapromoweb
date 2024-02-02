@@ -12,9 +12,9 @@ const Banner = () => {
       style={{
         backgroundImage: `url('https://ninjapromo.io/wp-content/themes/ninjapromo/assets/img/hero-section/web-develop-bg.jpg')`,
       }}
-      className="w-full bg-cover text-white"
+      className="w-full bg-cover py-20 text-white"
     >
-      <div className="mx-auto max-w-screen-xl p-10">
+      <div className="mx-auto max-w-screen-xl p-10 py-20">
         <div className="flex ">
           <div className="flex w-full flex-col gap-10 py-5 md:w-1/2 md:py-24">
             <h1 className="text-left text-2xl  font-bold md:text-4xl">

@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SuccessSteps from "../../../data/SuccesSteps";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const StepsForSuccess = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full">
       <div className="mx-auto max-w-screen-xl p-10 py-20">
-        <h1 className="pb-10 text-3xl">Our Steps For Mobile App Success</h1>
+        <h1
+          className="pb-10 text-3xl md:text-5xl"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Our Steps For Mobile App Success
+        </h1>
 
         {SuccessSteps.map((step, index) => (
-          <div>
+          <div data-aos="fade-right" data-aos-duration="1500">
             <div
               key={index}
               className="flex flex-col justify-between py-4 md:flex-row "
@@ -29,7 +39,11 @@ const StepsForSuccess = () => {
             <hr className="h-2" />
           </div>
         ))}
-        <div className="py-10 text-center">
+        <div
+          className="py-10 text-center"
+          data-aos="zoom-in"
+          data-aos-duration="1500"
+        >
           <button className="bg-blue-700 px-10 py-4 text-white">
             Get a proposol
           </button>

@@ -12,12 +12,12 @@ const Banner = () => {
       style={{
         backgroundImage: `url('https://ninjapromo.io/wp-content/themes/ninjapromo/assets/img/hero-section/hero-mobile-design02.jpg')`,
       }}
-      className="w-full bg-cover text-white"
+      className="w-full bg-cover text-white "
     >
-      <div className="mx-auto max-w-screen-xl p-10">
+      <div className="mx-auto max-w-screen-xl p-10 ">
         <div className="flex ">
           <div className="flex w-full flex-col gap-10 py-5 md:w-1/2 md:py-24">
-            <h1 className="text-left text-2xl  font-bold md:text-4xl">
+            <h1 className="pt-20 text-left  text-2xl font-bold md:text-4xl">
               Unlock your growth potential with dynamic mobile app development
               services
             </h1>

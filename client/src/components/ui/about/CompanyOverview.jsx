@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { GiStarSkull } from "react-icons/gi";
 import { VscArrowSmallRight } from "react-icons/vsc";
 import { CiHeart } from "react-icons/ci";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const CompanyOverview = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full py-20">
       <div className="relative mx-auto max-w-screen-xl  p-10">
         <div className="grid grid-cols-12 gap-5">
           <div className="col-span-12 md:col-span-5">
-            <div className="relative flex flex-col gap-5 rounded-br-3xl rounded-tl-3xl bg-gradient-to-r from-fuchsia-100 to-fuchsia-200 p-10">
-              <h1 className="text-3xl">We love what we do</h1>
-              <p className="text-md font-thin">
+            <div
+              className="relative flex flex-col gap-5 rounded-br-3xl rounded-tl-3xl bg-gradient-to-r from-fuchsia-100 to-fuchsia-200 p-10"
+              data-aos="zoom-in"
+              data-aos-duration="1200"
+            >
+              <h1
+                className="text-3xl"
+                data-aos="zoom-in"
+                data-aos-duration="1600"
+              >
+                We love what we do
+              </h1>
+              <p
+                className="text-md font-thin"
+                data-aos="zoom-in"
+                data-aos-duration="1600"
+              >
                 Some of us are shy, some are influential strategists. What we
                 have in common is our burning desire to create meaningful work
                 that reaches an audience. NinjaPromo is the perfect home for
@@ -19,7 +38,11 @@ const CompanyOverview = () => {
                 freedom to grow as an agency, grateful for our team, and
                 grateful for our clients. We love what we do. And we rock at it.
               </p>
-              <div className="flex items-center gap-3">
+              <div
+                className="flex items-center gap-3"
+                data-aos="zoom-in"
+                data-aos-duration="1800"
+              >
                 <p className="text-xl">Explore Services</p>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-800 hover:bg-blue-900">
                   <VscArrowSmallRight className="text-xl text-white" />
@@ -30,7 +53,11 @@ const CompanyOverview = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-12  mt-10 md:col-span-7  md:mt-48">
+          <div
+            className="col-span-12  mt-10 md:col-span-7  md:mt-48"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+          >
             <div className="flex flex-col gap-10 rounded-br-3xl rounded-tl-3xl border-2 border-black p-5 md:p-10 ">
               <h2 className="text-2xl">
                 Quality Always and No <br /> Matter What
@@ -52,7 +79,11 @@ const CompanyOverview = () => {
             </div>
           </div>
           <div className="hidden md:col-span-2 md:block"></div>
-          <div className="col-span-12 flex  flex-col gap-10 rounded-br-3xl rounded-tl-3xl bg-[#D8D7F4] p-10 md:col-span-7">
+          <div
+            className="col-span-12 flex  flex-col gap-10 rounded-br-3xl rounded-tl-3xl bg-[#D8D7F4] p-10 md:col-span-7"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
             <h2 className="text-2xl">Our Curiosity Never Stops</h2>
             <p className="text-md font-thin">
               We never rest on past success. We like to push boundaries and keep
@@ -73,7 +104,11 @@ const CompanyOverview = () => {
           <div className="hidden md:col-span-3 md:block"></div>
           <div className="hiddenmd:col-span-2 md:block"></div>
           <div className=" col-span-12 md:col-span-5"></div>
-          <div className="relative  col-span-12 flex flex-col gap-10 rounded-br-3xl rounded-tl-3xl border-2 border-black p-10 md:col-span-5">
+          <div
+            className="relative  col-span-12 flex flex-col gap-10 rounded-br-3xl rounded-tl-3xl border-2 border-black p-10 md:col-span-5"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
             <h1 className="text-3xl">
               We Empower Our Team and <br /> Put People Above All
             </h1>

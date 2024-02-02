@@ -9,6 +9,9 @@ const Header = () => {
   const handleSidebar = () => {
     setSidebar(!sideBar);
   };
+  const closeSidebar = () => {
+    setSidebar(false);
+  };
 
   const renderSidebar = () => {
     return (
@@ -18,32 +21,51 @@ const Header = () => {
             <IoMdClose className="text-2xl" onClick={handleSidebar} />
           </div>
           <ul className="flex flex-col gap-5 p-5 text-white">
-            <li>
-              Home <hr />
-            </li>
-            <li>
-              Seo <hr />
-            </li>
-            <li>
-              Web Design
-              <hr />
-            </li>
-            <li>
-              Mobile App Design
-              <hr />
-            </li>
-            <li>
-              Video Production <hr />
-            </li>
-            <li>
-              Social Media <hr />
-            </li>
-            <li>
-              Facebook Ads <hr />
-            </li>
-            <li>
-              About <hr />
-            </li>
+            <Link to="/" onClick={closeSidebar}>
+              <li>
+                Home <hr />
+              </li>
+            </Link>
+
+            <Link to="/services/seo" onClick={closeSidebar}>
+              <li>
+                Seo <hr />
+              </li>
+            </Link>
+            <Link to="services/web-design" onClick={closeSidebar}>
+              <li>
+                Web Design
+                <hr />
+              </li>
+            </Link>
+
+            <Link to="/services/mobile-app-development" onClick={closeSidebar}>
+              <li>
+                Mobile App Design
+                <hr />
+              </li>
+            </Link>
+            <Link to="/services/video-production" onClick={closeSidebar}>
+              <li>
+                Video Production <hr />
+              </li>
+            </Link>
+
+            <Link to="/services/social-media" onClick={closeSidebar}>
+              <li>
+                Social Media <hr />
+              </li>
+            </Link>
+            <Link to="/services/facebook-ads-agency" onClick={closeSidebar}>
+              <li>
+                Facebook Ads <hr />
+              </li>
+            </Link>
+            <Link to="/about" onClick={closeSidebar}>
+              <li>
+                About <hr />
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
@@ -103,9 +125,9 @@ const Header = () => {
                 </Link>
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
-                  to="/services/web-development"
+                  to="/services/web-design"
                 >
-                  Web Development
+                  Web Design
                 </Link>
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"

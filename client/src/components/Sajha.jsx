@@ -1,6 +1,11 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import PrimaryBtn from "./PrimaryBtn";
 const Sajha = ({ title, label, desc }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div
       style={{
@@ -10,12 +15,26 @@ const Sajha = ({ title, label, desc }) => {
     >
       <div className="mx-auto max-w-screen-xl p-10 py-5 md:py-20">
         <div className="items-center">
-          <h1 className="pb-10 text-center text-2xl md:text-5xl">{title}</h1>
-          <p className="pb-10 text-center text-sm font-thin">{desc}</p>
-          <div className="text-center">
-            <button className="bg-[#3C39C6] px-10 py-3 md:px-20   md:py-5">
-              {label}
-            </button>
+          <h1
+            className="pb-10 text-center text-2xl md:text-5xl"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            {title}
+          </h1>
+          <p
+            className="pb-10 text-center text-sm font-thin"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
+            {desc}
+          </p>
+          <div
+            className="text-center"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <PrimaryBtn label={label} />
           </div>
         </div>
       </div>

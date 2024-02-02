@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoMdPlay } from "react-icons/io";
 import { HiOutlineArrowSmallRight } from "react-icons/hi2";
 import FeaturedWorksData from "../../../data/FeaturedWorksData";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const FeaturedWorks = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h1 className="text-3xl md:text-5xl">
+        <h1
+          className="text-3xl md:text-5xl"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
           Some of Our Featured Works in Video & Social Media
         </h1>
       </div>
       <div className="grid grid-cols-1  md:grid-cols-2">
         {FeaturedWorksData.map((data) => (
-          <div key={data.id} className="group relative">
+          <div
+            key={data.id}
+            className="group relative"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+          >
             <img
               src={data.img}
               alt=""
@@ -31,16 +45,24 @@ const FeaturedWorks = () => {
       </div>
 
       <div className="mx-auto max-w-screen-xl p-10">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div
+          className="grid grid-cols-1 gap-5 md:grid-cols-2"
+          data-aos="zoom-in"
+          data-aos-duration="2500"
+        >
           <img
             src="https://ninjapromo.io/wp-content/uploads/2023/02/smm03.jpg"
             alt=""
             className="rounded-md"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
           />
           <img
             src="https://ninjapromo.io/wp-content/uploads/2023/02/smm04.jpg"
             alt=""
             className="rounded-md"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
           />
         </div>
         <div className=" flex justify-center gap-2 py-10 md:py-20">

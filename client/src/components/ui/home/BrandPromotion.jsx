@@ -61,7 +61,7 @@ const BrandPromotion = () => {
                       index < 2 ? "w-full md:w-auto" : "hidden md:flex"
                     }`}
                   >
-                    <img src={data.brand} alt="htx" className="w-24" />
+                    <img src={data.brand} alt={data.brand} className="w-24" />
                     <h2>{data.detail}</h2>
                     <div className="group flex items-center justify-end gap-2">
                       <a href="#" className="underline hover:no-underline">

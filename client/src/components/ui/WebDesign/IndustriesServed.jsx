@@ -1,8 +1,14 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ServedIndustryData from "../../../data/ServedIndustryData";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Slider from "react-slick";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const IndustriesServed = () => {
+  useEffect(() => {
+    AOS.init();
+  });
   const sliderRef = useRef(null);
 
   const settings = {
@@ -33,8 +39,14 @@ const IndustriesServed = () => {
   return (
     <div className="w-full bg-[#F5F5F9] py-20">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h1 className="pb-5 text-4xl">Industries We Serve</h1>
-        <p className="text-md pb-5">
+        <h1
+          className="pb-5 text-4xl"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+        >
+          Industries We Serve
+        </h1>
+        <p className="text-md pb-5" data-aos="fade-up" data-aos-duration="1500">
           We are a professional website design and development company offering
           world-class services at competitive <br className="hidden md:block" />{" "}
           prices. No matter your business size or sector, our website design
@@ -47,7 +59,11 @@ const IndustriesServed = () => {
         <div className="">
           <Slider ref={sliderRef} {...settings}>
             {ServedIndustryData.map((industry) => (
-              <div className="flex flex-col gap-5 rounded-md bg-white">
+              <div
+                className="flex flex-col gap-5 rounded-md bg-white"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+              >
                 <img src={industry.img} alt="" />
                 <div className="flex flex-col gap-5 p-10">
                   <div className="flex items-center gap-2">

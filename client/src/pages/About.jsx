@@ -6,9 +6,9 @@ import {
   OurTeam,
 } from "../components/ui/about";
 import HappyClients from "../components/HappyClients";
-import Contact from "../components/ui/home/Contact";
 import Review from "../components/Review";
 import Partners from "../components/Partners";
+import GrowJourney from "../components/GrowJourney";
 
 const About = () => {
   return (
@@ -20,7 +20,7 @@ const About = () => {
       <OurTeam />
       <CompanyOverview />
       <HappyClients />
-      <Contact />
+      <GrowJourney />
     </div>
   );
 };

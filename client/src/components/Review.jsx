@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PrimaryBtn from "./PrimaryBtn";
 const Review = () => {
   useEffect(() => {
     AOS.init();
@@ -61,7 +62,7 @@ const Review = () => {
       key={index}
       className="flex h-96 border-r border-white"
       data-aos="fade-left"
-      data-aos-duration="2000"
+      data-aos-duration="1000"
     >
       <div className="flex flex-col gap-5 p-5">
         <div>
@@ -95,7 +96,7 @@ const Review = () => {
         <h2
           className="pb-10 text-2xl md:text-5xl"
           data-aos="fade-right"
-          data-aos-duration="2000"
+          data-aos-duration="1500"
         >
           What people are saying
         </h2>
@@ -107,9 +108,7 @@ const Review = () => {
           <div className="flex flex-col-reverse items-center justify-between gap-5 p-5 md:flex-row">
             <div>
               <div className="">
-                <button className="bg-[#3c39c6] px-10 py-5 md:px-20">
-                  Get a proposal
-                </button>
+                <PrimaryBtn label={"Get a proposal"} />
               </div>
             </div>
             <div className="flex">

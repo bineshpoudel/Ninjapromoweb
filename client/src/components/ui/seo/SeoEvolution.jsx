@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoIosGlobe } from "react-icons/io";
 import Sajha from "../../Sajha";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const SeoEvolution = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full">
       <Sajha
@@ -15,12 +20,24 @@ const SeoEvolution = () => {
       />
       <div className="mx-auto max-w-screen-xl p-10">
         <div className="py-20">
-          <h1 className="text-center text-3xl md:text-5xl">
+          <h1
+            className="text-center text-3xl md:text-5xl"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             SEO digital marketing is constantly evolving
           </h1>
         </div>
-        <div className="relative rounded-br-3xl rounded-tl-3xl border-2 border-black">
-          <div className="text-md flex flex-col items-center gap-5 px-5 py-10 font-light md:px-20">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          className="relative rounded-br-3xl rounded-tl-3xl border-2 border-black"
+        >
+          <div
+            className="text-md flex flex-col items-center gap-5 px-5 py-10 font-light md:px-20"
+            data-aos="fade-up"
+            data-aos-duration="2500"
+          >
             <p>
               But so are we. Ten years ago, SEO strategies looked quite
               different than they do today. Google makes over 500 algorithm

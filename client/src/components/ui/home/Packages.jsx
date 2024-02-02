@@ -31,10 +31,16 @@ const Packages = () => {
   ];
 
   const renderPackage = packageDetails.map((data) => (
-    <div className="group w-full rounded-md bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-600 hover:p-1 md:w-1/3 ">
-      <div className="flex h-full w-full flex-col gap-12 rounded-md border-2 border-white bg-[#121212] p-5 font-bold hover:border-none">
+    <div
+      className={`group w-full rounded-md bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-600 hover:p-0.5 md:w-1/3 ${data.isActive ? "p-0.5" : ""} `}
+    >
+      <div
+        className={`flex h-full w-full flex-col gap-12 rounded-md border border-[#505050] bg-[#242424] p-5 font-bold hover:border-none ${data.isActive ? "border-none" : ""}`}
+      >
         <div className="flex flex-col items-center justify-between md:flex-row">
-          <h1 className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-600 bg-clip-text text-4xl hover:from-rose-400 hover:via-fuchsia-500 hover:to-purple-600 group-hover:text-transparent">
+          <h1
+            className={`bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-600 bg-clip-text text-4xl hover:from-rose-400 hover:via-fuchsia-500 hover:to-purple-600 group-hover:text-transparent ${data.isActive ? "from-rose-400via-fuchsia-500to-purple-600 bg-clip-text text-4xl text-transparent" : ""}`}
+          >
             ${data.rate}
           </h1>
           <div className="text-xs">
@@ -48,9 +54,11 @@ const Packages = () => {
         </div>
         <div className="w-84">
           <button
-            type="button"
-            className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
-             hover:bg-black hover:bg-gradient-to-r hover:from-black hover:to-black "
+            className={`w-full rounded-md border-2 border-gray-200 border-opacity-50 px-5 py-3 ${
+              data.isActive
+                ? "bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-700 hover:border-gray-200 hover:from-[#121212] hover:via-[#121212] hover:to-[#121212]"
+                : "hover:bg-gradient-to-r hover:from-rose-400 hover:to-purple-500"
+            }`}
           >
             Book Intro Call
           </button>

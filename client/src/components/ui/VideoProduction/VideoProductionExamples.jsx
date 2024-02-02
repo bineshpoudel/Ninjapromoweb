@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoMdPlay } from "react-icons/io";
 import VideoProductionExamplesData from "../../../data/VideoProductionExamples";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const VideoProductionExamples = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h1 className="text-2xl md:text-5xl">
+        <h1
+          className="pt-10 text-2xl md:text-5xl"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           Some of our Video Production Services Examples
         </h1>
       </div>
       <div className="grid grid-cols-1  md:grid-cols-2">
         {VideoProductionExamplesData.map((video) => (
-          <div key={video.id} className="group relative cursor-pointer">
+          <div
+            key={video.id}
+            className="group relative cursor-pointer"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <img
               src={video.img}
               alt=""

@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ServedIndustries from "../../../data/IndustriesServed";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const IndustriesServed = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full bg-[#F5F5F9]">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h1 className="py-10 text-3xl">Industries we serve</h1>
-        <p className="">
+        <h1
+          className="py-10 text-3xl"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+        >
+          Industries we serve
+        </h1>
+        <p className="pb-10" data-aos="fade-up" data-aos-duration="1400">
           Our extensive experience developing bespoke mobile apps spans across
           numerous sectors. No matter how large or small your business, or the
           complexity of your requirements, you can rest assured that we have
@@ -17,7 +27,11 @@ const IndustriesServed = () => {
 
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
           {ServedIndustries.map((industry) => (
-            <div className="flex flex-col gap-5 rounded-md bg-white p-5">
+            <div
+              className="flex flex-col gap-5 rounded-md bg-white p-5"
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
               <img src={industry.img} alt="" className="size-8" />
               <h2 className="text-xl font-semibold">{industry.industry}</h2>
               <div>
@@ -32,7 +46,11 @@ const IndustriesServed = () => {
           ))}
         </div>
         <div className="flex justify-center py-10 text-white">
-          <button className="text-l bg-blue-700 px-7 py-4">
+          <button
+            className="text-l bg-blue-700 px-7 py-4"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             Get a proposol
           </button>
         </div>

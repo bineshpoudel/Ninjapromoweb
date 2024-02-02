@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Process = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const processSteps = [
     {
       title: "Discovery",
@@ -39,12 +43,18 @@ const Process = () => {
   return (
     <div className="w-full">
       <div className="mx-auto max-w-screen-xl p-10">
-        <h1 className="pb-5 text-center text-2xl font-bold text-blue-700">
+        <h1
+          className="pb-5 text-center text-2xl font-bold text-blue-700"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+        >
           Our Process is Simple But Effective
         </h1>
         <div className="flex flex-col">
           {processSteps.map((step, index) => (
             <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
               key={index}
               className="flex flex-col gap-2 rounded-md border p-5"
             >

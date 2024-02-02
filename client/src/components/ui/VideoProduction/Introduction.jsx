@@ -1,16 +1,28 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Introduction = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full ">
       <div className="mx-auto max-w-screen-xl p-10">
-        <div className="flex items-center gap-2 py-10 text-xs">
+        <div
+          className="flex items-center gap-2 py-10 text-xs"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <span>Homepage &gt;</span>
           <span>Services &gt;</span>
           <span className="text-[#4cbe93]">Mobile App Development </span>
         </div>
-        <div className="pt-20">
-          <h1 className="pb-10 text-5xl">
+        <div className="pt-10">
+          <h1
+            className="pb-10 text-3xl md:text-5xl"
+            data-aos="fade-down"
+            data-aos-duration="1200"
+          >
             Bring your story to life by partnering with a leading video
             production company
           </h1>
@@ -19,18 +31,20 @@ const Introduction = () => {
               <img
                 src="https://ninjapromo.io/wp-content/uploads/2022/06/VIDEO-PRODUCTION.svg"
                 alt="vdoproductioni"
+                data-aos="fade-up"
+                data-aos-duration="2000"
               />
             </div>
 
             <div className="text-md flex w-full flex-col gap-3 text-[#121212]  md:w-3/5">
-              <p>
+              <p data-aos="fade-up" data-aos-duration="1300">
                 The benefits of adding video to your marketing strategy are
                 endless. It is one of the most powerful marketing tools to evoke
                 emotion, engage audiences, boost brand visibility online, and
                 increase sales. In order to reap these benefits however,
                 businesses require creative and appealing content.
               </p>
-              <p>
+              <p data-aos="fade-up" data-aos-duration="1800">
                 If you're worried about getting started, don't be. As a leading
                 video production company, our team is on hand starting at idea
                 generation all the way through to post-production. We have

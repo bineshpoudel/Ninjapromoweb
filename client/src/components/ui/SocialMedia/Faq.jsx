@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaPlusCircle } from "react-icons/fa";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Faq = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [activeItem, setActiveItem] = useState(null);
 
   const toggleItem = (index) => {
@@ -31,17 +35,26 @@ const Faq = () => {
   return (
     <div className="w-full">
       <div className="mx-auto max-w-screen-xl">
-        <h1 className=" text-5xl">Social Media Marketing FAQs</h1>
+        <h1 data-aos="fade-down" data-aos-duration="1200" className=" text-5xl">
+          Social Media Marketing FAQs
+        </h1>
       </div>
       <div className="flex flex-col items-center gap-10 p-10 md:flex-row md:p-0 ">
         <img
           src="https://ninjapromo.io/wp-content/themes/ninjapromo/assets/newdesign/faq_line-bg.svg"
           alt=""
           className="w-96"
+          data-aos="fade-right"
+          data-aos-duration="1500"
         />
         <div className=" w-full md:w-[50%] ">
           {faqData.map((item, index) => (
-            <div key={index} className="mb-4">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              key={index}
+              className="mb-4"
+            >
               <div
                 className="flex cursor-pointer items-center justify-between gap-10"
                 onClick={() => toggleItem(index)}

@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sajha from "../../Sajha";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const SuccessStories = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div>
       <Sajha title={"Our Success Stories"} label={"Learn More"} />
       <div className="w-full py-20">
         <div className="mx-auto max-w-screen-xl p-10 ">
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl font-bold">
+            <h1
+              className="text-3xl font-bold"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
               Enhance your brand with intuitive apps customers{" "}
               <br className="hidden md:block" /> love
             </h1>
-            <p className="font-thin">
+            <p
+              className="font-thin"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               Today's customers demand the ability to interact with your
               business as and when needed, and in the most convenient way. That
               means not only on the web, but on mobile devices too. As a leading

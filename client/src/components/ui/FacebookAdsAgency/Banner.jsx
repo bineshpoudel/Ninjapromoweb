@@ -9,7 +9,7 @@ import {
 const Banner = () => {
   return (
     <div
-      className="w-full bg-auto text-white"
+      className="w-full bg-auto py-20 text-white"
       style={{
         backgroundImage: `url("https://ninjapromo.io/wp-content/themes/ninjapromo/assets/img/hero-section/hero-bg-front.jpg")`,
       }}

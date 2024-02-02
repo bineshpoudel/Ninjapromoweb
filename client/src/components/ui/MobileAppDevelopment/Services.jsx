@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MobileAppDevelopmentServices from "../../../data/MobileAppServices";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Services = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl p-10">
-        <div className="flex items-center gap-2 py-10 text-xs">
+        <div
+          className="flex items-center gap-2 py-10 text-xs"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <span>Homepage &gt;</span>
           <span>Services &gt;</span>
           <span className="text-[#4cbe93]">Mobile App Development </span>
         </div>
-        <h1 className="text-2xl font-bold  md:text-4xl">
+        <h1
+          className="text-2xl font-bold  md:text-4xl"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           Our mobile application <br className="hidden md:block" /> development
           scope
         </h1>
-        <p className="w-full py-10 md:w-4/5">
+        <p
+          className="w-full py-10 md:w-4/5"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           In today's mobile-first world, your business will benefit from
           unparalleled app development services that prioritize the user
           experience. As a mobile application development company with years of
@@ -29,11 +45,17 @@ const Services = () => {
             className={`flex flex-col items-center gap-10 py-10 md:flex-row ${
               index % 2 === 0 ? "md:flex-row-reverse" : ""
             }`}
+            data-aos="zoom-in"
+            data-aos-duration="1200"
           >
             <div>
               <img src={service.serviceImage} alt="" />
             </div>
-            <div className="flex w-full flex-col gap-10 py-10  md:w-2/3">
+            <div
+              className="flex w-full flex-col gap-10 py-10  md:w-2/3"
+              data-aos="zoom-in"
+              data-aos-duration="1200"
+            >
               {service.serviceLogo && (
                 <img src={service.serviceLogo} alt="" className="size-16" />
               )}

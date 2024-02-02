@@ -1,11 +1,16 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import CaseStudiesData from "../../../data/CaseStudiesData";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { HiOutlineArrowSmallRight } from "react-icons/hi2";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const CaseStudies = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const sliderRef = useRef(null);
 
   const settings = {
@@ -35,9 +40,16 @@ const CaseStudies = () => {
   };
 
   return (
-    <div className="w-full bg-[#121212] text-white ">
+    <div className="rounddtr-3xl relative w-full rounded-tl-3xl bg-[#121212]  text-white">
+      <div className="absolute -top-10 left-20 -skew-x-12 bg-[#3c39c6] p-5 text-white md:left-[40%]">
+        <h1 className="text-3xl font-bold">Our Case Studies</h1>
+      </div>
       <div className="mx-auto max-w-screen-xl p-10">
-        <div className="flex items-center justify-between py-10">
+        <div
+          className="flex items-center justify-between py-10"
+          data-aos="zoom-out"
+          data-aos-duration="2500"
+        >
           <div className="flex">
             <GoArrowLeft
               className="h-12 w-12 cursor-pointer text-gray-500 duration-200 hover:text-white"
@@ -57,7 +69,12 @@ const CaseStudies = () => {
         </div>
         <Slider ref={sliderRef} {...settings}>
           {CaseStudiesData.map((data) => (
-            <div className="" key={data.id}>
+            <div
+              className=""
+              key={data.id}
+              data-aos="zoom-in"
+              data-aos-duration="2500"
+            >
               <div className="flex flex-col md:flex-row ">
                 <img src={data.img} alt="" className="w-full md:w-1/2" />
                 <div className="w-full bg-[#292D36] px-4 py-10 md:w-1/2">
