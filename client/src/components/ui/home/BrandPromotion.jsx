@@ -37,14 +37,26 @@ const BrandPromotion = () => {
                 <p className="text-2xl font-bold">
                   Proven expertise in promoting top international brands
                 </p>
-                <div className="flex flex-col items-center gap-3 uppercase ">
-                  <div className="flex gap-2">
+                <div
+                  className="flex flex-col items-center gap-3 uppercase "
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                >
+                  <div
+                    className="flex gap-2"
+                    data-aos="zoom-in"
+                    data-aos-duration="1500"
+                  >
                     <ServiceBtn service={"Crypto"} />
                     <ServiceBtn service={"Finetech"} />
                     <ServiceBtn service={"Saas"} />
                     <ServiceBtn service={"Software"} />
                   </div>
-                  <div className="flex gap-2">
+                  <div
+                    className="flex gap-2"
+                    data-aos="zoom-in"
+                    data-aos-duration="1500"
+                  >
                     <ServiceBtn service={"E-com"} />
                     <ServiceBtn service={"Gaming"} />
                     <ServiceBtn service={"B2B"} />
