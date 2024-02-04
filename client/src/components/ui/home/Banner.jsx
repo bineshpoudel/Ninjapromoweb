@@ -29,10 +29,10 @@ const Banner = () => {
             <div className="items-left flex flex-col gap-5 lg:flex-row ">
               <img
                 src={BannerLeft}
-                alt="banner left"
+                alt="banner-left"
                 className="h-12 w-56"
                 aos-data="zoom-in"
-                data-aos-duration="3000"
+                data-aos-duration="2500"
               />
               <div className="flex h-[2.578rem] w-[15.78rem]  items-center gap-4 rounded-full  border border-white px-5  py-2">
                 <PiCrown />

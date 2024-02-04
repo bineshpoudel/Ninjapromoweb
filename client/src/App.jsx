@@ -16,6 +16,7 @@ import {
   FacebookAdsAgency,
 } from "./pages";
 import MainFooter from "./components/MainFooter";
+import ErrorPage from "./components/ui/ErrorPage";
 
 const Layout = () => {
   return (
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "services/social-media",
         element: <SocialMedia />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
       },
     ],
   },
