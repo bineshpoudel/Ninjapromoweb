@@ -103,13 +103,12 @@ const Review = () => {
             {renderReview}
           </Slider>
 
-          <div className="flex flex-col-reverse items-center justify-between gap-5 p-5 md:flex-row">
-            <div>
-              <div className="">
-                <PrimaryBtn label={"Get a proposal"} />
-              </div>
+          <div className="flex flex-col-reverse items-center justify-between gap-5   p-5 md:flex-row">
+            <div className="">
+              <PrimaryBtn label={"Get a proposal"} />
             </div>
-            <div className="flex">
+
+            <div className="flex self-start">
               <GoArrowLeft
                 className="h-12 w-12 cursor-pointer text-gray-500 duration-200 hover:text-white"
                 onClick={handlePrevClick}
