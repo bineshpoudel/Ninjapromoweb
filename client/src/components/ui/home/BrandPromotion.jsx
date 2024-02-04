@@ -3,6 +3,7 @@ import { Credible, Htx, Intellectsoft, Stockmusic } from "../../../assets";
 import { CgArrowRight } from "react-icons/cg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ServiceBtn from "../../ServiceBtn";
 
 const BrandPromotion = () => {
   useEffect(() => {
@@ -32,23 +33,23 @@ const BrandPromotion = () => {
         <div className="relative" data-aos="fade-up" data-aos-duration="2000">
           <div className="h-84 w-full rounded-md bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5">
             <div className=" flex  h-full w-full flex-col gap-10 rounded-md bg-[#121212] p-3 pt-6  md:p-20">
-              <div className="flex gap-5">
+              <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
                 <p className="text-2xl font-bold">
                   Proven expertise in promoting top international brands
                 </p>
-                <div className="flex gap-1 uppercase ">
-                  {/* <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
-                    Crypto
-                  </button>
-                  <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
-                    Finetech
-                  </button>
-                  <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
-                    Saas
-                  </button>
-                  <button className="bg:text-[#3c39c6] rounded-lg bg-[#3c39c6] px-3  py-1 text-xs  hover:bg-white hover:text-[#3c39c6]">
-                    Software
-                  </button> */}
+                <div className="flex flex-col items-center gap-3 uppercase ">
+                  <div className="flex gap-2">
+                    <ServiceBtn service={"Crypto"} />
+                    <ServiceBtn service={"Finetech"} />
+                    <ServiceBtn service={"Saas"} />
+                    <ServiceBtn service={"Software"} />
+                  </div>
+                  <div className="flex gap-2">
+                    <ServiceBtn service={"E-com"} />
+                    <ServiceBtn service={"Gaming"} />
+                    <ServiceBtn service={"B2B"} />
+                    <ServiceBtn service={"Real State"} />
+                  </div>
                 </div>
               </div>
               <div className="flex gap-2 overflow-x-auto md:grid md:grid-cols-12">
@@ -57,9 +58,8 @@ const BrandPromotion = () => {
                     key={index}
                     data-aos="fade-up"
                     data-aos-duration="1200"
-                    className={`col-span-12 flex flex-col gap-5 rounded-md border border-gray-500 bg-gradient-to-r from-[#1d1d1d] to-[#2b2b2b] p-10 md:col-span-6 ${
-                      index < 2 ? "w-full md:w-auto" : "hidden md:flex"
-                    }`}
+                    className="col-span-12 flex min-w-72 flex-col gap-5 rounded-md border border-gray-500 bg-gradient-to-r from-[#1d1d1d] to-[#2b2b2b] p-10  md:col-span-6
+                      "
                   >
                     <img src={data.brand} alt={data.brand} className="w-24" />
                     <h2>{data.detail}</h2>
