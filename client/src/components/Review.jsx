@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import ReviewData from "../data/reviewData";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,12 +6,11 @@ import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PrimaryBtn from "./PrimaryBtn";
+import ReviewData from "../data/ReviewData";
 const Review = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-
-  const Reviews = ReviewData;
 
   // Create a ref to access slick methods
   const sliderRef = useRef(null);
@@ -57,7 +55,7 @@ const Review = () => {
     sliderRef.current.slickNext();
   };
 
-  const renderReview = Reviews.map((data, index) => (
+  const renderReview = ReviewData.map((data, index) => (
     <div
       key={index}
       className="flex h-96 border-r border-white"

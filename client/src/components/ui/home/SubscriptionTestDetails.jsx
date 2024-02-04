@@ -19,7 +19,7 @@ const SubscriptionTestDetails = () => {
 
         <div className="flex flex-col items-center gap-10 md:flex-row ">
           <div
-            assName="flex flex-col gap-16 w-1/2 "
+            className="flex w-1/2 flex-col gap-16 "
             data-aos="fade-right"
             data-aos-duration="2000"
           >
