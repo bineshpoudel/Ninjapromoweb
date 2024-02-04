@@ -10,7 +10,7 @@ const SubscriptionTestDetails = () => {
     <div className="w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl px-10 py-20 pb-20">
         <h1
-          className="pb-20 text-center text-2xl md:text-5xl"
+          className="pb-20 text-center text-3xl md:text-5xl"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
@@ -19,14 +19,14 @@ const SubscriptionTestDetails = () => {
 
         <div className="flex flex-col items-center gap-10 md:flex-row ">
           <div
-            className="flex w-1/2 flex-col gap-16 "
+            className="flex w-full flex-col gap-5 md:w-1/2 md:gap-16 "
             data-aos="fade-right"
             data-aos-duration="2000"
           >
             <h2 className="text-2xl">
               Register for the Zoom presentation and receive:
             </h2>
-            <ol className="flex list-decimal flex-col gap-5 px-2 pt-10 text-xl text-gray-400 md:px-5 ">
+            <ol className="flex list-decimal flex-col gap-5 px-5 pt-10 text-xl text-gray-400">
               <li>
                 A comprehensive blueprint for designing the ideal marketing
                 department
