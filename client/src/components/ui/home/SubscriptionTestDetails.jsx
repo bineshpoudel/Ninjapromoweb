@@ -26,7 +26,7 @@ const SubscriptionTestDetails = () => {
             <h2 className="text-2xl">
               Register for the Zoom presentation and receive:
             </h2>
-            <ol className="flex list-decimal flex-col gap-5 px-5 pt-10 text-xl text-gray-400 ">
+            <ol className="flex list-decimal flex-col gap-5 px-2 pt-10 text-xl text-gray-400 md:px-5 ">
               <li>
                 A comprehensive blueprint for designing the ideal marketing
                 department
