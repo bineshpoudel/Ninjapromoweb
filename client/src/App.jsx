@@ -12,8 +12,10 @@ import {
   Seo,
   SocialMedia,
   WebDesign,
+  Pricing,
   VideoProduction,
   FacebookAdsAgency,
+  ContactUs,
 } from "./pages";
 import MainFooter from "./components/MainFooter";
 import ErrorPage from "./components/ui/ErrorPage";
@@ -69,6 +71,14 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <ErrorPage />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
+      {
+        path: "/pricing",
+        element: <Pricing />,
       },
     ],
   },

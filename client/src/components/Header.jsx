@@ -1,66 +1,100 @@
 import React, { useState, useEffect } from "react";
 import { LogoSvg } from "../assets";
-import { RiMenu3Fill } from "react-icons/ri";
-import { SlArrowDown } from "react-icons/sl";
+import { GoHome } from "react-icons/go";
+import { TbWorldDollar } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import { IoMdClose } from "react-icons/io";
+import { HiOutlineSquaresPlus } from "react-icons/hi2";
+import { LuContact2 } from "react-icons/lu";
+
 const Header = () => {
   const [sideBar, setSidebar] = useState(false);
 
   const renderSidebar = () => {
     return (
-      <div className="fixed right-0 top-0 z-40 h-full w-96 bg-black ">
-        <div>
-          <div className="size-8 p-5">
-            <IoMdClose className="text-2xl" onClick={handleSidebar} />
+      <div className="fixed bottom-0 right-0 z-40 h-full w-[100vw] justify-between bg-[#121212] md:hidden ">
+        <div className="flex flex-col gap-3">
+          <h1 className="py-5 text-center text-3xl">Know About us</h1>
+          <div className="p-2">
+            <button
+              type="button"
+              className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
+             hover:bg-black hover:bg-gradient-to-r hover:from-black hover:to-black "
+            >
+              Discuss the project
+            </button>
           </div>
-          <ul className="flex flex-col gap-5 p-5 text-white">
-            <Link to="/" onClick={closeSidebar}>
-              <li>
-                Home <hr />
-              </li>
-            </Link>
+          <div className="p-2">
+            <button
+              type="button"
+              className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
+             hover:bg-black hover:bg-gradient-to-r hover:from-black hover:to-black "
+            >
+              Schedule a meeting
+            </button>
+          </div>
 
+          <h1 className="py-2 text-center text-3xl">Explore our Services</h1>
+          <div className="grid grid-cols-2 gap-5 p-5 ">
             <Link to="/services/seo" onClick={closeSidebar}>
-              <li>
-                Seo <hr />
-              </li>
-            </Link>
-            <Link to="services/web-design" onClick={closeSidebar}>
-              <li>
-                Web Design
-                <hr />
-              </li>
+              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+                <p className="">SEO</p>
+              </div>
             </Link>
 
-            <Link to="/services/mobile-app-development" onClick={closeSidebar}>
-              <li>
-                Mobile App Design
-                <hr />
-              </li>
+            <Link to="services/video-production" onClick={closeSidebar}>
+              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+                <p className="">Video Production</p>
+              </div>
             </Link>
-            <Link to="/services/video-production" onClick={closeSidebar}>
-              <li>
-                Video Production <hr />
-              </li>
+            <Link to="/services/mobile-app-development">
+              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+                <p className="">Mobile App Development</p>
+              </div>
             </Link>
-
-            <Link to="/services/social-media" onClick={closeSidebar}>
-              <li>
-                Social Media <hr />
-              </li>
+            <Link to="services/social-media" onClick={closeSidebar}>
+              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+                <p className="">Social Media Ads</p>
+              </div>
             </Link>
             <Link to="/services/facebook-ads-agency" onClick={closeSidebar}>
-              <li>
-                Facebook Ads <hr />
-              </li>
+              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+                <p className="">Facebook Ads</p>
+              </div>
             </Link>
-            <Link to="/about" onClick={closeSidebar}>
-              <li>
-                About <hr />
-              </li>
+            <Link to="/services/web-design" onClick={closeSidebar}>
+              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+                <p className="">Website Design</p>
+              </div>
             </Link>
-          </ul>
+          </div>
+          <div className="z-100 shadow-3xl  fixed bottom-0 flex h-12 w-full items-center justify-between border-t border-gray-600 py-10 lg:hidden">
+            <Link to="/" onClick={closeSidebar}>
+              <div className="flex flex-col items-center gap-1">
+                <GoHome className="size-6" />
+                <p className="text-sm font-thin">Home</p>
+              </div>
+            </Link>
+            <div className="flex flex-col items-center gap-1">
+              <HiOutlineSquaresPlus
+                className="size-6"
+                onClick={handleSidebar}
+              />
+              <p className="text-sm font-thin">Explore</p>
+            </div>
+
+            <div className="flex flex-col items-center gap-1">
+              <Link to="/pricing" onClick={closeSidebar}>
+                <TbWorldDollar className="size-6 " />
+                <p className="text-sm font-thin">Pricing</p>
+              </Link>
+            </div>
+            <Link to="/contact-us" onClick={closeSidebar}>
+              <div className="flex flex-col items-center gap-1">
+                <LuContact2 className="size-6" />
+                <p className="text-sm  font-thin">Contact</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     );
@@ -87,25 +121,62 @@ const Header = () => {
   }, []);
   return (
     <div
-      className={`fixed top-0 z-50 h-20 w-full hover:bg-[#121212] ${
-        isScrolled
-          ? "bg-[#121212] bg-opacity-100  md:bg-gray-500 md:bg-opacity-75"
-          : "bg-transparent"
+      className={`fixed bottom-0 z-50 h-20 w-full hover:bg-[#121212] md:top-0 ${
+        isScrolled ? "bg-[#121212] bg-opacity-100   " : "bg-transparent"
       } text-white`}
     >
       <div className="mx-auto max-w-screen-xl  p-4  sm:p-4 md:px-10 md:py-4">
         <div className="flex items-center justify-between">
-          <div className=" flex items-center gap-4">
+          <div className="hidden items-center gap-4 md:flex">
             <Link to="/">
               <img src={LogoSvg} alt="logo" />
             </Link>
+          </div>
+          <div className="z-100  shadow-3xl flex h-12 w-full items-center justify-between border-t border-[#525252] py-10 md:hidden">
+            <Link to="/">
+              <div className="flex flex-col items-center gap-1">
+                <GoHome className="size-6" />
+                <p className="text-sm font-thin">Home</p>
+              </div>
+            </Link>
+            <div className="flex flex-col items-center gap-1">
+              <HiOutlineSquaresPlus
+                className="size-6"
+                onClick={handleSidebar}
+              />
+              <p className="text-sm font-thin">Explore</p>
+            </div>
 
-            {/* <p className="font-thin">Marketing by Subscription</p> */}
+            <div className="flex flex-col items-center gap-1">
+              <Link to="/pricing">
+                <TbWorldDollar className="size-6 " />
+                <p className="text-sm font-thin">Pricing</p>
+              </Link>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <Link to="/contact-us">
+                <LuContact2 className="size-6" />
+                <p className="text-sm  font-thin">Contact</p>
+              </Link>
+            </div>
           </div>
-          <div className="flex h-8 w-12 items-center justify-center rounded-br-xl  rounded-tl-xl bg-gray-700 lg:hidden">
-            <RiMenu3Fill className="text-2xl" onClick={handleSidebar} />
-          </div>
-          <div className="hidden text-sm lg:flex lg:gap-12 ">
+          <div className="hidden text-sm md:flex md:gap-12 ">
+            <div className="flex items-center gap-2 ">
+              <Link
+                to="/"
+                className="transition-colors duration-300 ease-in-out hover:text-blue-500"
+              >
+                Home
+              </Link>
+            </div>
+            <div className="flex items-center gap-2 ">
+              <Link
+                to="/about"
+                className="transition-colors duration-300 ease-in-out hover:text-blue-500"
+              >
+                About
+              </Link>
+            </div>
             <div className="group relative inline-block">
               <Link className="flex items-center gap-2">
                 <a
@@ -114,10 +185,9 @@ const Header = () => {
                 >
                   Services
                 </a>
-                <SlArrowDown />
               </Link>
 
-              <div className="absolute left-0 z-10 hidden w-48 rounded bg-[#121212] p-5 py-5 text-left text-xs text-white shadow-md group-hover:block ">
+              <div className="absolute -left-10 z-10 hidden w-40 rounded bg-[#121212] p-5 py-5 text-left text-xs text-white shadow-md group-hover:block ">
                 <Link
                   className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
                   to="/services/social-media"
@@ -157,48 +227,27 @@ const Header = () => {
               </div>
             </div>
             <div className="flex items-center gap-2 ">
-              <a
-                href="#"
+              <Link
+                to="/pricing"
                 className="transition-colors duration-300 ease-in-out hover:text-blue-500"
               >
-                Industries
-              </a>
-              <SlArrowDown />
+                Pricing
+              </Link>
             </div>
             <div className="flex items-center justify-center gap-2">
               <a
                 href="#"
                 className="transition-colors duration-300 ease-in-out hover:text-blue-500"
               >
-                Work
+                Blog
               </a>
-              <SlArrowDown />
             </div>
 
-            <div className="group relative inline-block">
-              <Link className="flex items-center gap-2">
-                <a
-                  href="#"
-                  className="transition-colors duration-300 ease-in-out group-hover:text-blue-500"
-                >
-                  Company
-                </a>
-                <SlArrowDown />
-              </Link>
-
-              <div className="absolute left-0 z-10 hidden w-48 rounded bg-[#121212] p-5 py-4 text-left text-xs text-white shadow-md group-hover:block ">
-                <Link
-                  className="block px-4 py-2 duration-500 hover:text-[#3c39c6]"
-                  to="/about"
-                >
-                  About
-                </Link>
+            <Link to="/contact-us">
+              <div className="transition-colors duration-300 ease-in-out hover:text-blue-500">
+                Contact
               </div>
-            </div>
-
-            <div className="transition-colors duration-300 ease-in-out hover:text-blue-500">
-              Contact
-            </div>
+            </Link>
           </div>
           <div className="hidden lg:flex">
             <button
@@ -206,11 +255,11 @@ const Header = () => {
               className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
              hover:bg-black hover:bg-gradient-to-r hover:from-black hover:to-black "
             >
-              Discuss the project
+              Schedule a meeting
             </button>
           </div>
-          {sideBar && renderSidebar()}
         </div>
+        {sideBar && renderSidebar()}
       </div>
     </div>
   );
