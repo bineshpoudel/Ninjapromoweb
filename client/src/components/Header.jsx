@@ -164,7 +164,7 @@ const Header = () => {
             <div className="flex items-center gap-2 ">
               <Link
                 to="/"
-                className="transition-colors duration-300 ease-in-out hover:text-blue-500"
+                className="transition-colors duration-300 ease-in-out hover:text-[#3c39c6]"
               >
                 Home
               </Link>
@@ -172,7 +172,7 @@ const Header = () => {
             <div className="flex items-center gap-2 ">
               <Link
                 to="/about"
-                className="transition-colors duration-300 ease-in-out hover:text-blue-500"
+                className="transition-colors duration-300 ease-in-out hover:text-[#3c39c6]"
               >
                 About
               </Link>
@@ -181,7 +181,7 @@ const Header = () => {
               <Link className="flex items-center gap-2">
                 <a
                   href="#"
-                  className="transition-colors duration-300 ease-in-out group-hover:text-blue-500"
+                  className="transition-colors duration-300 ease-in-out group-hover:text-[#3c39c6]"
                 >
                   Services
                 </a>
@@ -229,7 +229,7 @@ const Header = () => {
             <div className="flex items-center gap-2 ">
               <Link
                 to="/pricing"
-                className="transition-colors duration-300 ease-in-out hover:text-blue-500"
+                className="transition-colors duration-300 ease-in-out hover:text-[#3c39c6]"
               >
                 Pricing
               </Link>
@@ -237,14 +237,14 @@ const Header = () => {
             <div className="flex items-center justify-center gap-2">
               <a
                 href="#"
-                className="transition-colors duration-300 ease-in-out hover:text-blue-500"
+                className="transition-colors duration-300 ease-in-out hover:text-[#3c39c6]"
               >
                 Blog
               </a>
             </div>
 
             <Link to="/contact-us">
-              <div className="transition-colors duration-300 ease-in-out hover:text-blue-500">
+              <div className="transition-colors duration-300 ease-in-out hover:text-[#3c39c6]">
                 Contact
               </div>
             </Link>
