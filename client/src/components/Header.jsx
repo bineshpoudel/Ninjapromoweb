@@ -67,7 +67,7 @@ const Header = () => {
               </div>
             </Link>
           </div>
-          <div className="z-100 shadow-3xl  fixed bottom-0 flex h-12 w-full items-center justify-between border-t border-gray-600 py-10 lg:hidden">
+          <div className="z-100 shadow-3xl  fixed bottom-0 flex h-12 w-full items-center justify-between py-10 lg:hidden">
             <Link to="/" onClick={closeSidebar}>
               <div className="flex flex-col items-center gap-1">
                 <GoHome className="size-6" />
@@ -121,8 +121,10 @@ const Header = () => {
   }, []);
   return (
     <div
-      className={`fixed bottom-0 z-50 h-20 w-full hover:bg-[#121212] md:top-0 ${
-        isScrolled ? "bg-[#121212] bg-opacity-100   " : "bg-transparent"
+      className={`fixed bottom-0 z-50 h-20 w-full bg-[#121212] hover:bg-[#121212] md:top-0 ${
+        isScrolled
+          ? "md:bg-[#121212] md:bg-opacity-100   "
+          : "md:bg-transparent"
       } text-white`}
     >
       <div className="mx-auto max-w-screen-xl  p-4  sm:p-4 md:px-10 md:py-4">
@@ -132,9 +134,9 @@ const Header = () => {
               <img src={LogoSvg} alt="logo" />
             </Link>
           </div>
-          <div className="z-100  shadow-3xl flex h-12 w-full items-center justify-between border-t border-[#525252] py-10 md:hidden">
+          <div className="z-100  shadow-3xl flex h-12 w-full items-center justify-between py-10 md:hidden">
             <Link to="/">
-              <div className="flex flex-col items-center gap-1">
+              <div className="flex flex-col items-center justify-center gap-1">
                 <GoHome className="size-6" />
                 <p className="text-sm font-thin">Home</p>
               </div>
@@ -146,19 +148,18 @@ const Header = () => {
               />
               <p className="text-sm font-thin">Explore</p>
             </div>
-
-            <div className="flex flex-col items-center gap-1">
-              <Link to="/pricing">
+            <Link to="/pricing">
+              <div className="flex flex-col items-center gap-1">
                 <TbWorldDollar className="size-6 " />
                 <p className="text-sm font-thin">Pricing</p>
-              </Link>
-            </div>
-            <div className="flex flex-col items-center gap-1">
-              <Link to="/contact-us">
+              </div>
+            </Link>
+            <Link to="/contact-us">
+              <div className="flex flex-col items-center justify-center gap-1">
                 <LuContact2 className="size-6" />
                 <p className="text-sm  font-thin">Contact</p>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div className="hidden text-sm md:flex md:gap-12 ">
             <div className="flex items-center gap-2 ">

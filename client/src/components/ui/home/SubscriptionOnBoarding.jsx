@@ -9,8 +9,11 @@ const SubscriptionOnBoarding = () => {
   return (
     <div className=" w-full bg-[#121212] text-white">
       <div className="mx-auto max-w-screen-xl px-10 py-20">
-        <h1 className="pb-20 text-center text-5xl" data-aos="fade-down">
-          You're now subscribed - <br />
+        <h1
+          className="pb-20 text-center text-3xl md:text-5xl"
+          data-aos="fade-down"
+        >
+          You're now subscribed - <br className="hidden md:block" />
           What comes next?
         </h1>
         <div className="flex  gap-3 md:gap-40" data-aos="fade-up">
