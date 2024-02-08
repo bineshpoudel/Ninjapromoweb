@@ -14,7 +14,7 @@ const Header = () => {
       <div className="fixed bottom-0 right-0 z-40 h-full w-[100vw] justify-between bg-[#121212] md:hidden ">
         <div className="flex flex-col gap-3">
           <h1 className="py-5 text-center text-3xl">Know About us</h1>
-          <div className="p-2">
+          <div className="px-5">
             <button
               type="button"
               className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
@@ -23,7 +23,7 @@ const Header = () => {
               Discuss the project
             </button>
           </div>
-          <div className="p-2">
+          <div className="px-5">
             <button
               type="button"
               className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
