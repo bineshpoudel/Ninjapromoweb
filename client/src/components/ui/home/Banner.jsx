@@ -82,12 +82,11 @@ const Banner = () => {
               </button>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative" data-aos="fade-up" data-aos-duration="2000">
             <img
               src={BannerRight}
               alt="banner-right"
               className="h-96 w-96 duration-500 hover:scale-110 md:h-[45.5rem] md:w-[45.5rem] lg:h-[471px] lg:w-[471px] "
-              data-aos="fade-up"
             />
             <div className="h-30 md:h-42 absolute  bottom-[-1.8rem] right-[1.2rem] flex w-3/5 flex-col gap-4 rounded-md bg-[#181818] px-6  py-4 text-xs md:right-[-1.6rem] md:w-4/5 md:text-xl">
               <h2 className="text-xl md:text-2xl">Clutch</h2>

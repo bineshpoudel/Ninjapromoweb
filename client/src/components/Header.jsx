@@ -7,107 +7,110 @@ import { HiOutlineSquaresPlus } from "react-icons/hi2";
 import { LuContact2 } from "react-icons/lu";
 
 const Header = () => {
-  const [sideBar, setSidebar] = useState(false);
+  // const [sideBar, setSidebar] = useState(false);
+  // const renderSidebar = () => {
+  //   return (
+  //     <div className="fixed bottom-0 right-0 z-40 h-full w-[100vw] justify-between bg-[#121212] md:hidden ">
+  //       <div className="flex flex-col gap-3">
+  //         <h1 className="py-5 text-center text-3xl">Know About us</h1>
+  //         <div className="px-5">
+  //           <button
+  //             type="button"
+  //             className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
+  //            hover:bg-black hover:bg-gradient-to-r hover:from-black hover:to-black "
+  //           >
+  //             Discuss the project
+  //           </button>
+  //         </div>
+  //         <div className="px-5">
+  //           <button
+  //             type="button"
+  //             className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
+  //            hover:bg-black hover:bg-gradient-to-r hover:from-black hover:to-black "
+  //           >
+  //             Schedule a meeting
+  //           </button>
+  //         </div>
 
-  const renderSidebar = () => {
-    return (
-      <div className="fixed bottom-0 right-0 z-40 h-full w-[100vw] justify-between bg-[#121212] md:hidden ">
-        <div className="flex flex-col gap-3">
-          <h1 className="py-5 text-center text-3xl">Know About us</h1>
-          <div className="px-5">
-            <button
-              type="button"
-              className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
-             hover:bg-black hover:bg-gradient-to-r hover:from-black hover:to-black "
-            >
-              Discuss the project
-            </button>
-          </div>
-          <div className="px-5">
-            <button
-              type="button"
-              className="w-full rounded-md border-2 border-gray-200 border-opacity-20 bg-gradient-to-r from-rose-400 via-fuchsia-500 to-purple-500 px-5  py-3 text-center text-white hover:border-gray-200
-             hover:bg-black hover:bg-gradient-to-r hover:from-black hover:to-black "
-            >
-              Schedule a meeting
-            </button>
-          </div>
+  //         <h1 className="py-2 text-center text-3xl">Explore our Services</h1>
+  //         <div className="grid grid-cols-2 gap-5 p-5 ">
+  //           <Link to="/services/seo" onClick={closeSidebar}>
+  //             <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+  //               <p className="">SEO</p>
+  //             </div>
+  //           </Link>
 
-          <h1 className="py-2 text-center text-3xl">Explore our Services</h1>
-          <div className="grid grid-cols-2 gap-5 p-5 ">
-            <Link to="/services/seo" onClick={closeSidebar}>
-              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
-                <p className="">SEO</p>
-              </div>
-            </Link>
+  //           <Link to="services/video-production" onClick={closeSidebar}>
+  //             <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+  //               <p className="">Video Production</p>
+  //             </div>
+  //           </Link>
+  //           <Link to="/services/mobile-app-development">
+  //             <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+  //               <p className="">Mobile App Development</p>
+  //             </div>
+  //           </Link>
+  //           <Link to="services/social-media" onClick={closeSidebar}>
+  //             <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+  //               <p className="">Social Media Ads</p>
+  //             </div>
+  //           </Link>
+  //           <Link to="/services/facebook-ads-agency" onClick={closeSidebar}>
+  //             <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+  //               <p className="">Facebook Ads</p>
+  //             </div>
+  //           </Link>
+  //           <Link to="/services/web-design" onClick={closeSidebar}>
+  //             <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
+  //               <p className="">Website Design</p>
+  //             </div>
+  //           </Link>
+  //         </div>
+  //         <div className="z-100 shadow-3xl  fixed bottom-0 flex h-12 w-full items-center justify-between py-10 lg:hidden">
+  //           <Link to="/" onClick={closeSidebar}>
+  //             <div className="flex flex-col items-center gap-1">
+  //               <GoHome className="size-6" />
+  //               <p className="text-sm font-thin">Home</p>
+  //             </div>
+  //           </Link>
+  //           <div className="flex flex-col items-center gap-1">
+  //             <HiOutlineSquaresPlus
+  //               className="size-6"
+  //               onClick={handleSidebar}
+  //             />
+  //             <p className="text-sm font-thin">Explore</p>
+  //           </div>
 
-            <Link to="services/video-production" onClick={closeSidebar}>
-              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
-                <p className="">Video Production</p>
-              </div>
-            </Link>
-            <Link to="/services/mobile-app-development">
-              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
-                <p className="">Mobile App Development</p>
-              </div>
-            </Link>
-            <Link to="services/social-media" onClick={closeSidebar}>
-              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
-                <p className="">Social Media Ads</p>
-              </div>
-            </Link>
-            <Link to="/services/facebook-ads-agency" onClick={closeSidebar}>
-              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
-                <p className="">Facebook Ads</p>
-              </div>
-            </Link>
-            <Link to="/services/web-design" onClick={closeSidebar}>
-              <div className="rounded-md bg-gradient-to-r from-purple-600 via-fuchsia-500 to-rose-400 p-5">
-                <p className="">Website Design</p>
-              </div>
-            </Link>
-          </div>
-          <div className="z-100 shadow-3xl  fixed bottom-0 flex h-12 w-full items-center justify-between py-10 lg:hidden">
-            <Link to="/" onClick={closeSidebar}>
-              <div className="flex flex-col items-center gap-1">
-                <GoHome className="size-6" />
-                <p className="text-sm font-thin">Home</p>
-              </div>
-            </Link>
-            <div className="flex flex-col items-center gap-1">
-              <HiOutlineSquaresPlus
-                className="size-6"
-                onClick={handleSidebar}
-              />
-              <p className="text-sm font-thin">Explore</p>
-            </div>
-
-            <div className="flex flex-col items-center gap-1">
-              <Link to="/pricing" onClick={closeSidebar}>
-                <TbWorldDollar className="size-6 " />
-                <p className="text-sm font-thin">Pricing</p>
-              </Link>
-            </div>
-            <Link to="/contact-us" onClick={closeSidebar}>
-              <div className="flex flex-col items-center gap-1">
-                <LuContact2 className="size-6" />
-                <p className="text-sm  font-thin">Contact</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  };
-  const handleSidebar = () => {
-    setSidebar(!sideBar);
-  };
-  const closeSidebar = () => {
-    setSidebar(false);
-  };
+  //           <div className="flex flex-col items-center gap-1">
+  //             <Link to="/pricing" onClick={closeSidebar}>
+  //               <TbWorldDollar className="size-6 " />
+  //               <p className="text-sm font-thin">Pricing</p>
+  //             </Link>
+  //           </div>
+  //           <Link to="/contact-us" onClick={closeSidebar}>
+  //             <div className="flex flex-col items-center gap-1">
+  //               <LuContact2 className="size-6" />
+  //               <p className="text-sm  font-thin">Contact</p>
+  //             </div>
+  //           </Link>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // };
+  // const handleSidebar = () => {
+  //   setSidebar(!sideBar);
+  // };
+  // const closeSidebar = () => {
+  //   setSidebar(false);
+  // };
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
 
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -134,33 +137,47 @@ const Header = () => {
               <img src={LogoSvg} alt="logo" />
             </Link>
           </div>
-          <div className="z-100  shadow-3xl flex h-12 w-full items-center justify-between py-10 md:hidden">
-            <Link to="/">
-              <div className="flex flex-col items-center justify-center gap-1">
+
+          {/* Navbar for smaller screens start--------- */}
+          <div className="z-100 shadow-3xl flex h-12 w-full items-center justify-between py-10 md:hidden">
+            <Link to="/" onClick={() => handleLinkClick("/")}>
+              <div
+                className={`flex flex-col items-center gap-1 ${activeLink === "/" ? "border-t-2 " : ""}`}
+              >
                 <GoHome className="size-6" />
                 <p className="text-sm font-thin">Home</p>
               </div>
             </Link>
-            <div className="flex flex-col items-center gap-1">
-              <HiOutlineSquaresPlus
-                className="size-6"
-                onClick={handleSidebar}
-              />
-              <p className="text-sm font-thin">Explore</p>
-            </div>
-            <Link to="/pricing">
-              <div className="flex flex-col items-center gap-1">
-                <TbWorldDollar className="size-6 " />
+            <Link to="/explore" onClick={() => handleLinkClick("/explore")}>
+              <div
+                className={`flex flex-col items-center gap-1 ${activeLink === "/explore" ? "border-t-2 " : ""}`}
+              >
+                <HiOutlineSquaresPlus className="size-6" />
+                <p className="text-sm font-thin">Explore</p>
+              </div>
+            </Link>
+            <Link to="/pricing" onClick={() => handleLinkClick("/pricing")}>
+              <div
+                className={`flex flex-col items-center gap-1 ${activeLink === "/pricing" ? "border-t-2 " : ""}`}
+              >
+                <TbWorldDollar className="size-6" />
                 <p className="text-sm font-thin">Pricing</p>
               </div>
             </Link>
-            <Link to="/contact-us">
-              <div className="flex flex-col items-center justify-center gap-1">
+            <Link
+              to="/contact-us"
+              onClick={() => handleLinkClick("/contact-us")}
+            >
+              <div
+                className={`flex flex-col items-center gap-1 ${activeLink === "/contact-us" ? "border-t-2 " : ""}`}
+              >
                 <LuContact2 className="size-6" />
-                <p className="text-sm  font-thin">Contact</p>
+                <p className="text-sm font-thin">Contact</p>
               </div>
             </Link>
           </div>
+          {/* Navbar for smaller screens end----------- */}
+          {/* Nav items for larger devices  */}
           <div className="hidden text-sm md:flex md:gap-12 ">
             <div className="flex items-center gap-2 ">
               <Link
@@ -260,7 +277,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-        {sideBar && renderSidebar()}
+        {/* {sideBar && renderSidebar()} */}
       </div>
     </div>
   );

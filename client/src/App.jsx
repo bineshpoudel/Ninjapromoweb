@@ -16,17 +16,22 @@ import {
   VideoProduction,
   FacebookAdsAgency,
   ContactUs,
+  Explore,
 } from "./pages";
 import MainFooter from "./components/MainFooter";
 import ErrorPage from "./components/ui/ErrorPage";
+import { useLocation } from "react-router-dom";
 
 const Layout = () => {
+  const location = useLocation();
+  // Check if the current path is "/explore"
+  const isExplorePage = location.pathname === "/explore";
   return (
     <div>
       <Header />
       <ScrollRestoration />
       <Outlet />
-      <MainFooter />
+      {!isExplorePage && <MainFooter />}
     </div>
   );
 };
@@ -79,6 +84,10 @@ const router = createBrowserRouter([
       {
         path: "/pricing",
         element: <Pricing />,
+      },
+      {
+        path: "/explore",
+        element: <Explore />,
       },
     ],
   },
