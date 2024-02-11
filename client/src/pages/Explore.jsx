@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Explore = () => {
   return (
-    <div className="w-full bg-[#121212] text-white">
+    <div className="fixed w-full bg-[#121212] py-10 text-white">
       <div className="mx-auto max-w-screen-xl p-10 ">
         <div className=" z-40 justify-between bg-[#121212] md:hidden ">
           <div className="flex flex-col gap-3 ">

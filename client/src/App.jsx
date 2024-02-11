@@ -24,6 +24,8 @@ import { useLocation } from "react-router-dom";
 
 const Layout = () => {
   const location = useLocation();
+
+  
   // Check if the current path is "/explore"
   const isExplorePage = location.pathname === "/explore";
   return (
