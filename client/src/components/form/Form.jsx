@@ -7,26 +7,31 @@ const Form = () => {
       <div className="flex flex-col gap-10 bg-[#ffffff] px-5 py-5 text-[#212121] md:px-20 md:py-10">
         <h1 className="text-center text-4xl">Tell us about you.</h1>
         <div className="flex flex-col gap-10">
-          <div>
-            <input
-              type="text"
-              placeholder="First Name*"
-              className="w-full placeholder-[#2E2E2E] focus:outline-none"
-            />
-            <hr className="border-[#7F7F7F]" />
+          <div className="flex gap-5">
+            <div>
+              <input
+                type="text"
+                placeholder="First Name*"
+                className="w-full placeholder-[#2E2E2E] focus:outline-none"
+              />
+
+              <hr className="border-[#7F7F7F]" />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Last Name*"
+                className="w-full placeholder-[#2E2E2E] focus:outline-none"
+              />
+
+              <hr className="border-[#7F7F7F]" />
+            </div>
           </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Last Name(optional)"
-              className="w-full placeholder-[#2E2E2E] focus:outline-none"
-            />
-            <hr className="border-[#7F7F7F]" />
-          </div>
+
           <div>
             <input
               type="email"
-              placeholder="Email*"
+              placeholder="Mobilee*"
               className="w-full placeholder-[#2E2E2E] focus:outline-none"
             />
             <hr className="border-[#7F7F7F]" />
@@ -39,16 +44,22 @@ const Form = () => {
             />
             <hr className="border-[#7F7F7F]" />
           </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Subject"
+              className="w-full placeholder-[#2E2E2E] focus:outline-none"
+            />
+            <hr className="border-[#7F7F7F]" />
+          </div>
           <div className="text-gray-500">
-            <h1 className="text-[#2e2e2e]">What is your Budget?*</h1>
-            <br />
-            <select className="block w-full appearance-none border-b border-none border-gray-800 bg-transparent focus:outline-none">
+            <select className="block w-full border-b border-none border-gray-800 bg-transparent focus:outline-none">
               <div className="flex">
-                <option value="" selected>
-                  -Please choose an option-
-                </option>
                 <FaChevronDown />
               </div>
+              <option value="" selected>
+                Please choose a service
+              </option>
               <option value="$5,001 - $10,000">$1 - $5,000</option>
               <option value="$5,001 - $10,000">$5,001 - $10,000</option>
               <option value="$5,001 - $10,000">$10,001 - $30,000</option>
